@@ -4,42 +4,40 @@
         <div class="row footer-content">
 
             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                <h4 class="text-uppercase">Giới thiệu</h4>
+                <h4 class="text-uppercase">Liên hệ</h4>
                 <ul>
-                    <li class="mb-3"><a href="{{route('getContact')}}"><i class="fa fa-chevron-right mr-2"
-                                aria-hidden="true"></i>Liên
-                            hệ</a></li>
-                    <li class="mb-3"><a href="{{route('getIntro')}}"><i class="fa fa-chevron-right mr-2"
-                                aria-hidden="true"></i>Giới thiệu</a></li>
+                    <li class="my-3"><a href="#"><strong>Địa chỉ: 93/7/13 Đường 2, KP2, P. Tam Bình, Q. Thủ
+                                Đức</strong></a></li>
+                    <li class="my-3"><a href="#"><strong>Địa chỉ: 331/46 Vườn Lài, P. An Phú Đông, Q.12, TP.
+                                HCM</strong></a></li>
+                    <li class="mb-3"><a href="#"><strong>Điện thoại : 0972925492</strong></a>
+                    </li>
+                    <li class="mb-3"><a href="#"><strong>Email: cokhisauhoang@gmail.com</strong></a></li>
                 </ul>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
 
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 px-0">
-                    <!-- <h4 class="text-uppercase">Hỗ trợ khách hàng</h4> -->
+                    <h4 class="text-uppercase">Sản phẩm</h4>
                     <ul>
-                        <!-- <li class="my-3"><a href="#"><i class="fa fa-chevron-right mr-2" aria-hidden="true"></i>Hướng
-                                dẫn đặt hàng</a></li>
-                        <li class="mb-3"><a href="#"><i class="fa fa-chevron-right mr-2" aria-hidden="true"></i>Hướng
-                                dẫn mua hàng - thanh toán</a></li>
-                        <li class="mb-3"><a href="#"><i class="fa fa-chevron-right mr-2" aria-hidden="true"></i>Chính
-                                sách bảo hảnh</a></li>
-                        <li class="mb-3"><a href="#"><i class="fa fa-chevron-right mr-2" aria-hidden="true"></i>Chính
-                                sách bảo mật thông tin</a></li> -->
+                        @foreach( config('config.cate_name') as $cateKey => $cateInfo )
+                        <li class="my-3"><a
+                                href="{{route('getCate', ['cate' => config('config.cate')[$cateKey]])}}">{{$cateInfo[0]}}</a>
+                        </li>
+                        @endforeach
                     </ul>
                 </div>
 
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                     <h4 class="text-uppercase">Liên hệ</h4>
                     <ul class="contact-info">
-                        <li class="my-3"><a href="#"><strong>Địa chỉ: 93/7/13 Đường 2, KP2, P. Tam Bình, Q. Thủ
-                                    Đức</strong></a></li>
-                        <li class="my-3"><a href="#"><strong>Địa chỉ: 331/46 Vườn Lài, P. An Phú Đông, Q.12, TP.
-                                    HCM</strong></a></li>
-                        <li class="mb-3"><a href="#"><strong>Điện thoại : 0972925492</strong></a>
+                        <li class="my-3">
+                            <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline"
+                                data-width="" data-height="" data-small-header="false" data-adapt-container-width="true"
+                                data-hide-cover="false">
+                            </div>
                         </li>
-                        <li class="mb-3"><a href="#"><strong>Email: cokhisauhoang@gmail.com</strong></a></li>
                     </ul>
                 </div>
             </div>
@@ -82,3 +80,6 @@
 <!-- Go top top  -->
 <a href="#" id="goTop"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
 <!---END #footer-->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v5.0">
+</script>

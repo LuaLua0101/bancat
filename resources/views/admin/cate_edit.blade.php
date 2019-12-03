@@ -44,12 +44,19 @@
                             <div class="line"></div>
 
                             <div class="form-group row">
-                              <label class="col-sm-2 form-control-label">Mô tả:</label>
-                              <div class="col-sm-10">
-                                <textarea id="form-description-txt" class="text-content form-control" name="description" >{{$cate->description}}</textarea>
-                              </div>
+                                <label class="col-sm-2 form-control-label">Mô tả:</label>
+                                <div class="col-sm-10">
+                                    <textarea id="form-description-txt" class="text-content form-control"
+                                        name="description">{{$cate->description}}</textarea>
+                                </div>
                             </div>
-
+                            <script>
+                           CKEDITOR.replace( 'form-description-txt', {
+                      language: 'en',
+                      filebrowserUploadUrl: '{!! route('uploadImage', ['_token' => csrf_token() ]) !!}',
+                      filebrowserUploadMethod: 'form'
+                    } );
+                            </script>
                             <div class="form-group bold">
                                 <input type="reset" value="RESET" class="btn btn-secondary"> <input type="submit"
                                     value="CẬP NHẬT" class="btn btn-primary">
@@ -66,5 +73,5 @@
 @endsection
 
 @section('js')
-<script src="{{asset('public/admin/js/post.js')}}" type="text/javascript" ></script>
+<script src="{{asset('public/admin/js/post.js')}}" type="text/javascript"></script>
 @endsection

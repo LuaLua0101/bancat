@@ -36,14 +36,14 @@
                             </div>
                         </div>
 
-                        <nav class="pagination-wrap mt-70 mt-md-50 mt-sm-35">
+                        <!-- <nav class="pagination-wrap mt-70 mt-md-50 mt-sm-35">
                             <ul class="pagination pagination--2 justify-content-center">
                                 <li class="active mr-2"><a href="#" class="bg-main-color">1</a></li>
                                 <li><a href="#">2</a></li>
                                 <li><a href="#">3</a></li>
                                 <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
                             </ul>
-                        </nav>
+                        </nav> -->
                     </div>
 
                     <div class="col-lg-3">

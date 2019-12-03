@@ -40,7 +40,7 @@
                  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 px-0">
 
                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 px-0">
-                         <a href="./index.html" target="_blank" class="main-logo">
+                         <a href="{{route('getHome')}}" target="_blank" class="main-logo">
                              <h1>
                                  <img src="{{asset('public/bancat/images/logo.png')}}" alt="Logo" title="Patin">
                              </h1>
@@ -129,7 +129,7 @@
                  </button>
                  <ul class="visible-xs visible-sm">
                      <li class="d-inline-block">
-                         <a href="./index.html" target="_blank" class="main-logo">
+                         <a href="{{route('getHome')}}" target="_blank" class="main-logo">
                              <img src="./public/bancat/images/logo.png" alt="Logo" title="Patin" width="200"
                                  class="py-2">
                          </a>

@@ -30,7 +30,7 @@ class MainController extends Controller
 
         // echo "<pre>";
         // print_r($products);die;
-
+        config(['config.title' => 'Trang chủ']);
         return view('frontend.index', $this->data);
 
     }
@@ -38,8 +38,10 @@ class MainController extends Controller
     public function getIntro()
     {
         $newsModel = new News();
-        $news = $newsModel->getIntro();
-        return view('frontend.intro', ['news' => $news]);
+        $this->data['news'] = $newsModel->getIntro();
+        $this->data['newsRelated'] = $newsModel->getList5NewestNews();
+        config(['config.title' => 'Giới thiệu']);
+        return view('frontend.intro', $this->data);
 
     }
 
@@ -73,7 +75,8 @@ class MainController extends Controller
             $this->data['products'] = $products;
 
             $this->data['title'] = config('config.cate_name')[array_search($cate, config('config.cate'))][0];
-
+            $this->data['description'] = config('config.cate_name')[array_search($cate, config('config.cate'))][1];
+            config(['config.title' => $this->data['title']]);
             return view('frontend.product', $this->data);
         }
 
@@ -114,7 +117,7 @@ class MainController extends Controller
         $newss = $newsModel->getListNews();
         $this->data['newss'] = $newss;
         $this->data['news_5'] = $newsModel->getList5NewestNews();
-
+        config(['config.title' => 'Tin tức']);
         return view('frontend.news', $this->data);
 
     }

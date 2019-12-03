@@ -84,6 +84,7 @@ Route::middleware(['runall'])->group(function () {
     // FRONDEND ***********
     Route::get('/gioi-thieu', 'MainController@getIntro')->name('getIntro');
     Route::get('/lien-he', function () {
+        config(['config.title' => 'Liên hệ']);
         return view('frontend.contact');
     })->name('getContact');
     Route::get('/chinh-sach-giao-hang-doi-tra', function () {

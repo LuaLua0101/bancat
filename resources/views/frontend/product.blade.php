@@ -78,7 +78,10 @@
                     </div>
                 </div>
             </div>
-
+          
+        </div>
+        <div class="row">
+            {!!$description!!}
         </div>
     </div>
 </section>

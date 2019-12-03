@@ -27,10 +27,52 @@
 
                                 {!!$news->content!!}
                             </div>
+
+                            <!-- <div class="share-article text-center">
+                                <h6>Chia sẻ bài viết</h6>
+                                <div class="share-icons nav justify-content-center">
+                                    <a class="facebook" href="#">
+                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    </a>
+
+                                    <a class="twitter" href="#">
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="reddit" href="#">
+                                        <i class="fa fa-reddit" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="pinterest" href="#">
+                                        <i class="fa fa-pinterest" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div> -->
+
                             <!-- Start Comment Area Wrapper -->
                             <div class="comment-area-wrapper">
                         </section>
                     </article>
+                </div>
+
+                <div class="col-lg-3 my-4">
+                    <div class="sidebar-area">
+                        <div class="sidebar-item">
+                            <h4 class="sidebar-title">Các bài viết mới nhất</h4>
+                            <div class="sidebar-body">
+                                @foreach($newsRelated as $item)
+                                <div class="sidebar-product">
+                                    <a href="{{route('getNews', ['news' => $item->slug])}}" class="image"><img
+                                            src="{{asset('public/img/post/'.$item->cover)}}" alt="{{$item->title}}"
+                                            class="img-responsive"></a>
+                                    <div class="content">
+                                        <a href="{{route('getNews', ['news' => $item->slug])}}"
+                                            class="title">{{$item->title}}</a>
+                                        <p>There are simple hand-held tire-pressure gauges which can..</p>
+                                    </div>
+                                </div>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

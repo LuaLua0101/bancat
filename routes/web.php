@@ -12,7 +12,8 @@
  */
 
 Route::middleware(['runall'])->group(function () {
-    Route::get('/', 'MainController@getHome')->name('getHome');
+    Route::get('/', 'MainController@getHome');
+    Route::get('/index', 'MainController@getHome')->name('getHome');
 
     Auth::routes();
 

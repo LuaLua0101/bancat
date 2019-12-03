@@ -33,8 +33,8 @@
                     <h4 class="text-uppercase">Liên hệ</h4>
                     <ul class="contact-info">
                         <li class="my-3">
-                        <img src="{{asset('public/bancat/images/logo.png')}}" alt="Logo" title="Patin" width="500"
-                                 class="py-2">
+                            <img src="{{asset('public/bancat/images/logo.png')}}" alt="Logo" title="Patin" width="500"
+                                class="img-responsive">
                         </li>
                     </ul>
                 </div>

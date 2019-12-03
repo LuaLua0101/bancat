@@ -629,9 +629,10 @@ header {
     header .main-nav .navbar-ex1-collapse .mobile-search {
       display: inline-block; }
   header .navbar-toggle {
-    float: left;
+    float: right;
     border: none;
     margin-left: 15px;
+    margin-right: 15px;
     padding: 10% 2%; }
   header .navbar-default .navbar-toggle .icon-bar {
     background: #ffff; }

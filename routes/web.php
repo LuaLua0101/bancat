@@ -39,6 +39,14 @@ Route::middleware(['runall'])->group(function () {
             Route::get('/product', 'AdminController@getListProduct')->name('adgetListProduct');
             Route::get('/product-del/{id}', 'AdminController@getDelProduct')->name('adgetDelProduct');
 
+            // Banner
+            Route::get('/banner-add', 'AdminController@getAddBanner')->name('adgetAddBanner');
+            Route::post('/banner-add', 'AdminController@postAddBanner')->name('adpostAddBanner');
+            Route::get('/banner-edit/{id}', 'AdminController@getEditBanner')->name('adgetEditBanner');
+            Route::post('/banner-edit/{id}', 'AdminController@postEditBanner')->name('adpostEditBanner');
+            Route::get('/banner', 'AdminController@getListBanner')->name('adgetListBanner');
+            Route::get('/banner-del/{id}', 'AdminController@getDelBanner')->name('adgetDelBanner');
+
             // Cate
             Route::get('/cate-add', 'AdminController@getAddCate')->name('adgetAddCate');
             Route::post('/cate-add', 'AdminController@postAddCate')->name('adpostAddCate');

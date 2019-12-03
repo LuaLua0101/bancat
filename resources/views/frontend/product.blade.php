@@ -8,9 +8,6 @@
 
             <!-- Banner and products  -->
             <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-                <div class="title_danhmuc">
-                    <h1 style="color:#0588fa"><b>{{$title}}</b></h1>
-                </div>
                 <!-- RESULTS -->
                 <div class="filter-results">
                     <!-- Filter sub bar  -->
@@ -43,44 +40,53 @@
                             </div> -->
 
                     </div>
-                    <!-- Products list  -->
-                    <div class="product-lists best-sellers my-4">
-                        <div class="row">
-                            @foreach($products as $item)
-                            <!-- Product block  -->
-                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                                <a href="#" target="_blank" rel="noopener noreferrer">
-                                    <div class="product-block thumbnail px-0 py-0">
-                                        <div class="mb-0">
-                                            <div class="product-img">
-                                                <a href="{{route('getProduct', ['product' => $item->slug])}}">
-                                                    <img class="lazy" src="{{asset('public/img/post/' . $item->cover)}}"
-                                                        alt="{{$item->title}}"
-                                                        style="object-fit: cover;width: 270px;height: 270px;" />
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="product-caption text-center">
-                                            <h3 class="product-title mt-0 py-3">
-                                                {{$item->title}}
-                                            </h3>
-                                            <div class="price-wrapper pb-3">
-                                                <span class="price"><span
-                                                        class="pricing">{{number_format($item->price)}}<span
-                                                            class="currency">₫</span></span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
+
+                    <section class="best-sellers kids-products">
+                        <div class="container">
+                            <!-- Title  -->
+                            <div class="breadcum">
+                                <h2 class="text-uppercase breadcum-header">
+                                    <span style="color:#0588fa"><b>{{$title}}</b></span>
+                                </h2>
                             </div>
-                            @endforeach
+                            <!-- List products  -->
+                            <div class="row my-4 pt-3">
+                                @foreach($products as $item)
+                                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                    <a href="{{route('getProduct', ['product' => $item->slug])}}" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <div class="product-block thumbnail px-0 py-0">
+                                            <div class="mb-0">
+                                                <div class="product-img">
+                                                    <img src="{{asset('public/img/post/' . $item->cover)}}"
+                                                        alt="{{$item->title}}"
+                                                        style="object-fit: cover;width: 270px;height: 270px;"
+                                                        class="img-responsive mx-auto">
+                                                </div>
+                                            </div>
+                                            <div class="product-caption text-center">
+                                                <h3 class="product-title mt-0 py-3">
+                                                    <a
+                                                        href="{{route('getProduct', ['product' => $item->slug])}}">{{$item->title}}</a>
+                                                </h3>
+                                                <div class="price-wrapper pb-3">
+                                                    <span class="price"><span
+                                                            class="pricing">{{number_format($item->price)}}<span
+                                                                class="currency">₫</span></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                @endforeach
+                            </div>
                         </div>
-                    </div>
+                    </section>
                 </div>
             </div>
-          
+
         </div>
-        <div class="row">
+        <div class="row" style="padding: 10px">
             {!!$description!!}
         </div>
     </div>

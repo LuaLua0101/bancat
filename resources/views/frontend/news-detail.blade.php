@@ -2,38 +2,82 @@
 
 @section('content')
 
-<div id="main_content">
-    <div class="wapper cach_top">
-        <div class="row">
-            <div class="col-md-9 col-sm-12 col-xs-12 col-noidung">
-                <div class="w_tieude_tin">
-                    <p>{{$news->title}}</p>
+<!--============================================ PAGE CONTENT============================================  -->
+<section class="blog-detail">
+
+    <div class="blog-details-page-wrapper">
+        <div class="container container-wide">
+            <div class="row">
+                <div class="col-lg-9">
+                    <!-- Title  -->
+                    <div class="breadcum pt-3">
+                        <h2 class="text-uppercase breadcum-header">
+                            <span>{{$news->title}}</span>
+                        </h2>
+                    </div>
+                    <article class="blog-post-details">
+                        <figure class="blog-post-thumb">
+                            <img src="{{asset('public/img/post/'.$news->cover)}}" alt="{{$news->title}}"
+                                class="img-responsive" style="object-fit: cover;width: 1270px;height: 350px;">
+                        </figure>
+
+                        <section class="blog-post-txt-wrap">
+                            <div class="blog-post-txt">
+                                <h2>{{$news->description}}</h2>
+
+                                {!!$news->content!!}
+                            </div>
+
+                            <!-- <div class="share-article text-center">
+                                <h6>Chia sẻ bài viết</h6>
+                                <div class="share-icons nav justify-content-center">
+                                    <a class="facebook" href="#">
+                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    </a>
+
+                                    <a class="twitter" href="#">
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="reddit" href="#">
+                                        <i class="fa fa-reddit" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="pinterest" href="#">
+                                        <i class="fa fa-pinterest" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div> -->
+
+                            <!-- Start Comment Area Wrapper -->
+                            <div class="comment-area-wrapper">
+                        </section>
+                    </article>
                 </div>
-                <div class="in_mota" style="margin-bottom: 20px;">
-                    <p>{{$news->description}}</p>
+
+                <div class="col-lg-3 my-4">
+                    <div class="sidebar-area">
+                        <div class="sidebar-item">
+                            <h4 class="sidebar-title">Các bài viết mới nhất</h4>
+                            <div class="sidebar-body">
+                                @foreach($newsRelated as $item)
+                                <div class="sidebar-product">
+                                    <a href="{{route('getNews', ['news' => $item->slug])}}" class="image"><img
+                                            src="{{asset('public/img/post/'.$item->cover)}}" alt="{{$item->title}}"
+                                            class="img-responsive"></a>
+                                    <div class="content">
+                                        <a href="{{route('getNews', ['news' => $item->slug])}}"
+                                            class="title">{{$item->title}}</a>
+                                        <p>There are simple hand-held tire-pressure gauges which can..</p>
+                                    </div>
+                                </div>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                {!!$news->content!!}
-                <div class="fb-comments" data-href="{{url()->current()}}" data-numposts="5" data-width="100%"></div>
-            </div>
-            <div class="col-md-3 col-sm-12 col-xs-12 col-lq">
-                <div class="w_tieude_tin">
-                    <p>Các bài viết khác</p>
-                </div>
-                <ul>
-                    @foreach($newsRelated as $item)
-                    <li>
-                        <a href="{{route('getNews', ['news' => $item->slug])}}">
-                            <i class="fa fa-angle-double-right" aria-hidden="true"></i>{{$item->title}}</a>
-                    </li>
-                    @endforeach
-                </ul>
-                <div class="clear"></div>
-                <div class="pagination"></div>
             </div>
         </div>
     </div>
-    <div class="clear"></div>
-</div>
-<!---END #main_content-->
+</section>
+<!--============================================ PAGE CONTENT============================================  -->
 
 @endsection

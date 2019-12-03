@@ -24,11 +24,16 @@
                 <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                     <div class="homepage-sliders">
                         <div class="block-slider">
-                            <img src="./bancat/images/banner/day-ky-thuat-truot-patin-tai-trung-tam-thinh-nguyen.jpg"
+                            <img src="{{asset('public/bancat/images/banner/day-ky-thuat-truot-patin-tai-trung-tam-thinh-nguyen.jpg')}}"
                                 alt="banner" class="img-responsive mx-auto">
                         </div>
                         <div class="block-slider">
-                            <img src="./bancat/images/banner/patin11.jpg" alt="banner" class="img-responsive mx-auto">
+                            <img src="{{asset('public/bancat/images/banner/patin11.jpg')}}" alt="banner"
+                                class="img-responsive mx-auto">
+                        </div>
+                        <div class="block-slider">
+                            <img src="{{asset('public/bancat/images/banner/patin11.jpg')}}" alt="banner"
+                                class="img-responsive mx-auto">
                         </div>
                     </div>
                 </div>
@@ -44,7 +49,8 @@
                 <!-- item  -->
                 <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                     <div class="col-xs-3 col-lg-3 px-0">
-                        <img src="./images/chips/icon1.jpg" alt="freeship" width="66" height="66">
+                        <img src="{{asset('public/bancat/images/chips/icon1.jpg')}}" alt="freeship" width="66"
+                            height="66">
                     </div>
                     <div class="col-xs-9 col-lg-9 pr-0 quality-caption">
                         <div class="main-caption">
@@ -56,7 +62,8 @@
                 <!-- item  -->
                 <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                     <div class="col-xs-3 col-lg-3 px-0">
-                        <img src="./images/chips/icon2.jpg" alt="freeship" width="66" height="66">
+                        <img src="{{asset('public/bancat/images/chips/icon2.jpg')}}" alt="freeship" width="66"
+                            height="66">
                     </div>
                     <div class="col-xs-9 col-lg-9 pr-0 quality-caption">
                         <div class="main-caption">
@@ -68,7 +75,8 @@
                 <!-- item  -->
                 <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                     <div class="col-xs-3 col-lg-3 px-0">
-                        <img src="./images/chips/icon3.jpg" alt="freeship" width="66" height="66">
+                        <img src="{{asset('public/bancat/images/chips/icon3.jpg')}}" alt="freeship" width="66"
+                            height="66">
                     </div>
                     <div class="col-xs-9 col-lg-9 pr-0 quality-caption">
                         <div class="main-caption">
@@ -80,7 +88,8 @@
                 <!-- item  -->
                 <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                     <div class="col-xs-3 col-lg-3 px-0">
-                        <img src="./images/chips/icon4.jpg" alt="freeship" width="66" height="66">
+                        <img src="{{asset('public/bancat/images/chips/icon4.jpg')}}" alt="freeship" width="66"
+                            height="66">
                     </div>
                     <div class="col-xs-9 col-lg-9 pr-0 quality-caption">
                         <div class="main-caption">
@@ -93,124 +102,6 @@
         </div>
     </div>
     <!-- End 4 qualities  -->
-    <!-- Best sellers -->
-    <section class="best-sellers mt-4">
-        <div class="container">
-            <!-- Title  -->
-            <div class="breadcum pt-3">
-                <h2 class="text-uppercase breadcum-header">
-                    <span>Sản phẩm bán chạy</span>
-                </h2>
-            </div>
-            <!-- List products  -->
-            <div class="row my-4 pt-3">
-                <!-- Product block  -->
-                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <div class="product-block thumbnail px-0 py-0">
-                            <div class="mb-0">
-                                <div class="product-img">
-                                    <img src="./images/products/giay-patin-flying-eagle-b5-den3-247x296.jpg" alt="prod"
-                                        class="img-responsive mx-auto">
-                                </div>
-                            </div>
-                            <div class="product-caption text-center">
-                                <h3 class="product-title mt-0 py-3">
-                                    Giày Patin Flying Eagle S6 Xanh
-                                </h3>
-                                <div class="price-wrapper pb-3">
-                                    <span class="price"><span class="pricing">1.500.000<span
-                                                class="currency">₫</span></span></span>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </a>
-                </div>
-                <!-- Product block  with discount -->
-                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <div class="product-block thumbnail px-0 py-0">
-                            <div class="mb-0">
-                                <div class="product-img">
-                                    <span class="discount-rate">-15%</span>
-                                    <img src="./images/products/giay-patin-flying-eagle-b6-den2-247x296.jpg" alt="prod"
-                                        class="img-responsive mx-auto">
-                                </div>
-                            </div>
-                            <div class="product-caption text-center">
-                                <h3 class="product-title mt-0 py-3">
-                                    Giày Patin Flying Eagle S6 Xanh
-                                </h3>
-                                <div class="price-wrapper pb-3">
-                                    <span class="price">
-                                        <span class="discount-price"><del>2.0000.0000</del></span>
-                                        <span class="pricing">1.500.000<span class="currency">₫</span></span></span>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </a>
-                </div>
-                <!-- Product block  -->
-                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                    <a href="#">
-
-                        <div class="product-block thumbnail px-0 py-0">
-                            <div class="mb-0">
-                                <div class="product-img">
-                                    <img src="./images/products/giay-patin-flying-eagle-F2-xanh6-e1573737787425-247x296.jpg"
-                                        alt="prod" class="img-responsive mx-auto">
-                                </div>
-                            </div>
-                            <div class="product-caption text-center">
-                                <h3 class="product-title mt-0 py-3">
-                                    Giày Patin Flying Eagle S6 Xanh
-                                </h3>
-                                <div class="price-wrapper pb-3">
-                                    <span class="price"><span class="pricing">1.500.000<span
-                                                class="currency">₫</span></span></span>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </a>
-                </div>
-                <!-- Product block  with discount -->
-                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                    <a href="#">
-
-
-                    </a>
-                    <div class="product-block thumbnail px-0 py-0">
-                        <div class="mb-0">
-                            <div class="product-img">
-                                <span class="discount-rate">-15%</span>
-                                <img src="./images/products/giay-truot-patin-flying-eagle-drift-21-247x296.jpg"
-                                    alt="prod" class="img-responsive mx-auto">
-                            </div>
-                        </div>
-                        <div class="product-caption text-center">
-                            <h3 class="product-title mt-0 py-3">
-                                Giày Patin Flying Eagle S6 Xanh
-                            </h3>
-                            <div class="price-wrapper pb-3">
-                                <span class="price">
-                                    <span class="discount-price"><del>2.0000.0000</del></span>
-                                    <span class="pricing">1.500.000<span class="currency">₫</span></span></span>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- End best sellers  -->
     <!-- Latest products  -->
     <section class="best-sellers latest-products">
@@ -223,22 +114,26 @@
             </div>
             <!-- List products  -->
             <div class="row my-4 pt-3">
+                @foreach($list5 as $item)
                 <!-- Product block  -->
                 <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                     <a href="#" target="_blank" rel="noopener noreferrer">
                         <div class="product-block thumbnail px-0 py-0">
                             <div class="mb-0">
                                 <div class="product-img">
-                                    <img src="./images/products/giay-patin-flying-eagle-b5-den3-247x296.jpg" alt="prod"
-                                        class="img-responsive mx-auto">
+                                    <a href="{{route('getProduct', ['product' => $item->slug])}}">
+                                        <img src="{{asset('public/img/post/' . $item->cover)}}" alt="{{$item->title}}"
+                                            class="img-responsive mx-auto"
+                                            style="object-fit: cover;width: 1270px;height: 260px;">
+                                    </a>
                                 </div>
                             </div>
                             <div class="product-caption text-center">
                                 <h3 class="product-title mt-0 py-3">
-                                    Giày Patin Flying Eagle S6 Xanh
+                                    {{$item->title}}
                                 </h3>
                                 <div class="price-wrapper pb-3">
-                                    <span class="price"><span class="pricing">1.500.000<span
+                                    <span class="price"><span class="pricing">{{number_format($item->price)}}<span
                                                 class="currency">₫</span></span></span>
                                 </div>
                             </div>
@@ -246,109 +141,42 @@
                         </div>
                     </a>
                 </div>
-                <!-- Product block  with discount -->
-                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <div class="product-block thumbnail px-0 py-0">
-                            <div class="mb-0">
-                                <div class="product-img">
-                                    <span class="discount-rate">-15%</span>
-                                    <img src="./images/products/giay-patin-flying-eagle-b6-den2-247x296.jpg" alt="prod"
-                                        class="img-responsive mx-auto">
-                                </div>
-                            </div>
-                            <div class="product-caption text-center">
-                                <h3 class="product-title mt-0 py-3">
-                                    Giày Patin Flying Eagle S6 Xanh
-                                </h3>
-                                <div class="price-wrapper pb-3">
-                                    <span class="price">
-                                        <span class="discount-price"><del>2.0000.0000</del></span>
-                                        <span class="pricing">1.500.000<span class="currency">₫</span></span></span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- Product block  -->
-                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <div class="product-block thumbnail px-0 py-0">
-                            <div class="mb-0">
-                                <div class="product-img">
-                                    <img src="./images/products/giay-patin-flying-eagle-F2-xanh6-e1573737787425-247x296.jpg"
-                                        alt="prod" class="img-responsive mx-auto">
-                                </div>
-                            </div>
-                            <div class="product-caption text-center">
-                                <h3 class="product-title mt-0 py-3">
-                                    Giày Patin Flying Eagle S6 Xanh
-                                </h3>
-                                <div class="price-wrapper pb-3">
-                                    <span class="price"><span class="pricing">1.500.000<span
-                                                class="currency">₫</span></span></span>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </a>
-                </div>
-                <!-- Product block  with discount -->
-                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <div class="product-block thumbnail px-0 py-0">
-                            <div class="mb-0">
-                                <div class="product-img">
-                                    <span class="discount-rate">-15%</span>
-                                    <img src="./images/products/giay-truot-patin-flying-eagle-drift-21-247x296.jpg"
-                                        alt="prod" class="img-responsive mx-auto">
-                                </div>
-                            </div>
-                            <div class="product-caption text-center">
-                                <h3 class="product-title mt-0 py-3">
-                                    Giày Patin Flying Eagle S6 Xanh
-                                </h3>
-                                <div class="price-wrapper pb-3">
-                                    <span class="price">
-                                        <span class="discount-price"><del>2.0000.0000</del></span>
-                                        <span class="pricing">1.500.000<span class="currency">₫</span></span></span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
     <!-- Latest products  -->
-    <!-- Patin for kids -->
+    @foreach( config('config.cate_name') as $cateKey => $cateInfo )
+    @if(isset($products[$cateKey]))
     <section class="best-sellers kids-products">
         <div class="container">
             <!-- Title  -->
             <div class="breadcum">
                 <h2 class="text-uppercase breadcum-header">
-                    <span>Patin trẻ em</span>
+                    <span>{{$cateInfo[0]}}</span>
                 </h2>
             </div>
             <!-- List products  -->
             <div class="row my-4 pt-3">
-                <!-- Product block  -->
+
+                @foreach($products[$cateKey] as $item)
                 <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
+                    <a href="{{route('getProduct', ['product' => $item->slug])}}" target="_blank"
+                        rel="noopener noreferrer">
                         <div class="product-block thumbnail px-0 py-0">
                             <div class="mb-0">
                                 <div class="product-img">
-                                    <img src="./images/products/giay-patin-flying-eagle-b5-den3-247x296.jpg" alt="prod"
+                                    <img src="{{asset('public/img/post/' . $item->cover)}}" alt="{{$item->title}}"
+                                        style="object-fit: cover;width: 1270px;height: 260px;"
                                         class="img-responsive mx-auto">
                                 </div>
                             </div>
                             <div class="product-caption text-center">
                                 <h3 class="product-title mt-0 py-3">
-                                    Giày Patin Flying Eagle S6 Xanh
+                                    <a href="{{route('getProduct', ['product' => $item->slug])}}">{{$item->title}}</a>
                                 </h3>
                                 <div class="price-wrapper pb-3">
-                                    <span class="price"><span class="pricing">1.500.000<span
+                                    <span class="price"><span class="pricing">{{number_format($item->price)}}<span
                                                 class="currency">₫</span></span></span>
                                 </div>
                             </div>
@@ -356,193 +184,12 @@
                         </div>
                     </a>
                 </div>
-                <!-- Product block  with discount -->
-                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <div class="product-block thumbnail px-0 py-0">
-                            <div class="mb-0">
-                                <div class="product-img">
-                                    <span class="discount-rate">-15%</span>
-                                    <img src="./images/products/giay-patin-flying-eagle-b6-den2-247x296.jpg" alt="prod"
-                                        class="img-responsive mx-auto">
-                                </div>
-                            </div>
-                            <div class="product-caption text-center">
-                                <h3 class="product-title mt-0 py-3">
-                                    Giày Patin Flying Eagle S6 Xanh
-                                </h3>
-                                <div class="price-wrapper pb-3">
-                                    <span class="price">
-                                        <span class="discount-price"><del>2.0000.0000</del></span>
-                                        <span class="pricing">1.500.000<span class="currency">₫</span></span></span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- Product block  -->
-                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <div class="product-block thumbnail px-0 py-0">
-                            <div class="mb-0">
-                                <div class="product-img">
-                                    <img src="./images/products/giay-patin-flying-eagle-F2-xanh6-e1573737787425-247x296.jpg"
-                                        alt="prod" class="img-responsive mx-auto">
-                                </div>
-                            </div>
-                            <div class="product-caption text-center">
-                                <h3 class="product-title mt-0 py-3">
-                                    Giày Patin Flying Eagle S6 Xanh
-                                </h3>
-                                <div class="price-wrapper pb-3">
-                                    <span class="price"><span class="pricing">1.500.000<span
-                                                class="currency">₫</span></span></span>
-                                </div>
-                            </div>
+                @endforeach
 
-                        </div>
-                    </a>
-                </div>
-                <!-- Product block  with discount -->
-                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <div class="product-block thumbnail px-0 py-0">
-                            <div class="mb-0">
-                                <div class="product-img">
-                                    <span class="discount-rate">-15%</span>
-                                    <img src="./images/products/giay-truot-patin-flying-eagle-drift-21-247x296.jpg"
-                                        alt="prod" class="img-responsive mx-auto">
-                                </div>
-                            </div>
-                            <div class="product-caption text-center">
-                                <h3 class="product-title mt-0 py-3">
-                                    Giày Patin Flying Eagle S6 Xanh
-                                </h3>
-                                <div class="price-wrapper pb-3">
-                                    <span class="price">
-                                        <span class="discount-price"><del>2.0000.0000</del></span>
-                                        <span class="pricing">1.500.000<span class="currency">₫</span></span></span>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </a>
-                </div>
             </div>
         </div>
-    </section>
-    <!-- End patin for kids  -->
-    <!-- Patin for kids -->
-    <section class="best-sellers adults-products">
-        <div class="container">
-            <!-- Title  -->
-            <div class="breadcum">
-                <h2 class="text-uppercase breadcum-header">
-                    <span>Giày trượt Patin người lớn</span>
-                </h2>
-            </div>
-            <!-- List products  -->
-            <div class="row my-4 pt-3">
-                <!-- Product block  -->
-                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <div class="product-block thumbnail px-0 py-0">
-                            <div class="mb-0">
-                                <div class="product-img">
-                                    <img src="./images/products/giay-patin-flying-eagle-b5-den3-247x296.jpg" alt="prod"
-                                        class="img-responsive mx-auto">
-                                </div>
-                            </div>
-                            <div class="product-caption text-center">
-                                <h3 class="product-title mt-0 py-3">
-                                    Giày Patin Flying Eagle S6 Xanh
-                                </h3>
-                                <div class="price-wrapper pb-3">
-                                    <span class="price"><span class="pricing">1.500.000<span
-                                                class="currency">₫</span></span></span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- Product block  with discount -->
-                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <div class="product-block thumbnail px-0 py-0">
-                            <div class="mb-0">
-                                <div class="product-img">
-                                    <span class="discount-rate">-15%</span>
-                                    <img src="./images/products/giay-patin-flying-eagle-b6-den2-247x296.jpg" alt="prod"
-                                        class="img-responsive mx-auto">
-                                </div>
-                            </div>
-                            <div class="product-caption text-center">
-                                <h3 class="product-title mt-0 py-3">
-                                    Giày Patin Flying Eagle S6 Xanh
-                                </h3>
-                                <div class="price-wrapper pb-3">
-                                    <span class="price">
-                                        <span class="discount-price"><del>2.0000.0000</del></span>
-                                        <span class="pricing">1.500.000<span class="currency">₫</span></span></span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- Product block  -->
-                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-
-                        <div class="product-block thumbnail px-0 py-0">
-                            <div class="mb-0">
-                                <div class="product-img">
-                                    <img src="./images/products/giay-patin-flying-eagle-F2-xanh6-e1573737787425-247x296.jpg"
-                                        alt="prod" class="img-responsive mx-auto">
-                                </div>
-                            </div>
-                            <div class="product-caption text-center">
-                                <h3 class="product-title mt-0 py-3">
-                                    Giày Patin Flying Eagle S6 Xanh
-                                </h3>
-                                <div class="price-wrapper pb-3">
-                                    <span class="price"><span class="pricing">1.500.000<span
-                                                class="currency">₫</span></span></span>
-                                </div>
-                            </div>
-
-                        </div>
-                    </a>
-                </div>
-                <!-- Product block  with discount -->
-                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <div class="product-block thumbnail px-0 py-0">
-                            <div class="mb-0">
-                                <div class="product-img">
-                                    <span class="discount-rate">-15%</span>
-                                    <img src="./images/products/giay-truot-patin-flying-eagle-drift-21-247x296.jpg"
-                                        alt="prod" class="img-responsive mx-auto">
-                                </div>
-                            </div>
-                            <div class="product-caption text-center">
-                                <h3 class="product-title mt-0 py-3">
-                                    Giày Patin Flying Eagle S6 Xanh
-                                </h3>
-                                <div class="price-wrapper pb-3">
-                                    <span class="price">
-                                        <span class="discount-price"><del>2.0000.0000</del></span>
-                                        <span class="pricing">1.500.000<span class="currency">₫</span></span></span>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+    </section> @endif
+    @endforeach
     <!-- End patin for kids  -->
     <!-- News  -->
     <section class="latest-news">
@@ -554,23 +201,26 @@
                 </h2>
             </div>
             <div class="row">
+                @foreach($newss as $item)
                 <!-- News item  -->
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 news-item">
                     <a href="#">
                         <div class="news-block thumbnail">
                             <div class="mb-0">
                                 <div class="news-img">
-                                    <img src="./images/banner/1-6797.jpg" alt="prod" class="img-responsive mx-auto">
+                                    <a href="{{route('getNews', ['news' => $item->slug])}}">
+                                        <img src="{{asset('public/img/post/' . $item->cover)}}"
+                                            style="object-fit: cover;width: 270px;height: 270px;" alt="{{$item->title}}"
+                                            class="img-responsive mx-auto" />
+                                    </a>
                                 </div>
                             </div>
                             <div class="news-caption text-center px-3">
                                 <h3 class="news-title mt-0 py-3">
-                                    Dạy kỹ thuật trượt Patin tại trung tâm dạy trượt patin Thịnh Nguyễn
+                                    <a href="{{route('getNews', ['news' => $item->slug])}}">{{$item->title}}</a>
                                 </h3>
                                 <div class="news-overview pb-3">
-                                    <p class="text-overflow">Trượt patin là một môn thể thao giải trí lành mạnh,
-                                        giúp cơ thể dẻo dai, tinh
-                                        thẩn sảng khoái. Trượt patin đòi hỏi người chơi phải [...]</p>
+                                    <p class="text-overflow">{{$item->description}}...</p>
                                 </div>
                             </div>
 
@@ -578,54 +228,7 @@
 
                     </a>
                 </div>
-                <!-- News item  -->
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 news-item">
-                    <a href="#">
-                        <div class="news-block thumbnail">
-                            <div class="mb-0">
-                                <div class="news-img">
-                                    <img src="./images/banner/patin3.jpg" alt="prod" class="img-responsive mx-auto">
-                                </div>
-                            </div>
-                            <div class="news-caption text-center px-3">
-                                <h3 class="news-title mt-0 py-3">
-                                    Dạy kỹ thuật trượt Patin tại trung tâm dạy trượt patin Thịnh Nguyễn
-                                </h3>
-                                <div class="news-overview pb-3">
-                                    <p class="text-overflow">Trượt patin là một môn thể thao giải trí lành mạnh,
-                                        giúp cơ thể dẻo dai, tinh
-                                        thẩn sảng khoái. Trượt patin đòi hỏi người chơi phải [...]</p>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </a>
-                </div>
-                <!-- News item  -->
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 news-item">
-                    <a href="#">
-                        <div class="news-block thumbnail">
-                            <div class="mb-0">
-                                <div class="news-img">
-                                    <img src="./images/banner/patin11.jpg" alt="prod" class="img-responsive mx-auto">
-                                </div>
-                            </div>
-                            <div class="news-caption text-center px-3">
-                                <h3 class="news-title mt-0 py-3">
-                                    Dạy kỹ thuật trượt Patin tại trung tâm dạy trượt patin Thịnh Nguyễn
-                                </h3>
-                                <div class="news-overview pb-3">
-                                    <p class="text-overflow">Trượt patin là một môn thể thao giải trí lành mạnh,
-                                        giúp cơ thể dẻo dai, tinh
-                                        thẩn sảng khoái. Trượt patin đòi hỏi người chơi phải [...]</p>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </a>
-                </div>
+                @endforeach
             </div>
 
         </div>

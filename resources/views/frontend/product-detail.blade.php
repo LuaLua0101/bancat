@@ -2,137 +2,200 @@
 
 @section('content')
 
-<div id="main_content">
-    <link href="{{asset('public/magiczoomplus/magiczoomplus.css')}}" rel="stylesheet" type="text/css" media="screen" />
-    <link href="{{asset('public/css/tab.css')}}" type="text/css" rel="stylesheet" />
+<!--============================================ PAGE CONTENT============================================  -->
+<section class="product-detail container my-4">
+    <div class="row">
+        <!-- Images and detail  -->
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+            <div class="row">
 
-    <div class="wapper">
-
-        <!--End Jquery tabs-->
-        <div class="title_danhmuc">
-            <p>Chi tiết sản phẩm</p>
-        </div>
-        <div class="box_container">
-            <div class="wap_pro">
-
-                <div class="zoom_slick">
-                    <div class="slick2">
-                        @foreach(json_decode($product->list_img,true) as $img)
-                        <a data-zoom-id="Zoom-detail" id="Zoom-detail" class="MagicZoom"
-                            href="{{asset('public/img/post/' . $img)}}"><img class='cloudzoom'
-                                src="{{asset('public/img/post/' . $img)}}" /></a>
-                        @endforeach
-                    </div>
-                    <!--.slick-->
-
-                    <div class="slick">
-                        @foreach(json_decode($product->list_img,true) as $img)
-                        <p><img src="{{asset('public/img/post/' . $img)}}" /></p>
-                        @endforeach
-                    </div>
-                    <!--.slick-->
-                </div>
-                <!--.zoom_slick-->
-
-                <ul class="product_info">
-                    <li class="ten">{{$product->title}}</li>
-                    <li class="gia"><b>Giá:</b>
-                        <div class="gia">
-                            <p>{{number_format($product->price)}} VND</p>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <div class="product-images">
+                        <div class="slider-for">
+                            <img class="lazy" src="{{asset('public/img/post/' . $product->cover)}}"
+                                alt="{{$product->title}}" style="object-fit: cover;width: 270px;height: 370px;" />
                         </div>
-                    </li>
-                    <li>
-                        <b>Đơn vị tính:</b> <b>{{$product->unit}}</b>
-                    </li>
-                    <li>
-                        <b>Trọng lượng:</b> <b>{{$product->weight}}</b>
-                    </li>
-                    <li>
-                        <b>Xuất xứ:</b> <b>{{$product->origin}}</b>
-                    </li>
-                    <li>
-                        <b>Tình trạng:</b> <b>{{$product->status===0?"Hết hàng":"Còn hàng"}}</b>
-                    </li>
+                        <!-- <div class="slider-nav mt-3">
+                            @foreach(json_decode($product->list_img,true) as $img)
+                            <p> <img src="{{asset('public/img/post/' . $img)}}" class="img-responsive mr-3"
+                                    alt="Item 1"></p>
+                            @endforeach
+                        </div> -->
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <div class="product-info">
+                        <p>{{$product->title}}</p>
+                        <div class="rating mb-2">
+                            <i class="fa fa-star text-brand" aria-hidden="true"></i>
+                            <i class="fa fa-star text-brand" aria-hidden="true"></i>
+                            <i class="fa fa-star text-brand" aria-hidden="true"></i>
+                            <i class="fa fa-star text-brand" aria-hidden="true"></i>
+                            <i class="fa fa-star text-brand" aria-hidden="true"></i>
+                        </div>
+                        <div class="prod-id">
+                            Mã Số Sản Phẩm: <span class="text-grey">13223 - 13210</span>
+                        </div>
 
-                    <!-- <li>
-                        <div class="product-qty">
-                            <div class="show">
-                                <label>Đặt hàng:</label>
+                        <div class="price text-brand my-4 fs-20">
+                            {{number_format($product->price)}} ₫
+                        </div>
+                        <div class="prod-desc">
+                            Mô tả ngắn: <span class="text-grey">{!!$product->description!!}</span>
+                        </div>
+                        <!-- Actions  -->
+                        <div>
+                            <br /><br />
+                            <!-- <button class="bg-blue-light full-width btn my-3"><a href="#" class="text-white fs-20">Thêm
+                                    vào giỏ hàng</a></button> -->
+                            <div class="text-center">
+                                Gọi đặt mua: <a class="text-brand" href="tel:0972925492">0972925492<time
+                                        class="text-black"> (7:30-21:30)</time></a>
                             </div>
-                            <div>
-                                <div class="controls" style="display: inline-block;vertical-align: middle;">
-                                    <button class="fa fa-minus"></button>
-                                    <input type="text" value="1" readonly id="qty" />
-                                    <button class="fa fa-plus is-up"></button>
-                                    <div class="clear"></div>
-                                </div>
-                                <div class="cart" style="display: inline-block;vertical-align: middle;">
-                                    <a href="javascript:void(0)" class="add-cart"
-                                        onclick="doAddCartMore({{$product->id}},'{{$product->title}}','{{$product->slug}}','{{asset('public/img/post/' . $product->cover)}}',{{$product->price}});">Thêm
-                                        vào giỏ <i class="fa fa-cart-plus"></i></a>
-                                </div>
+                        </div>
+                    </div>
+                </div>
 
-                                <div class="cart" style="display: inline-block;vertical-align: middle;">
-                                    <a href="{{route('getCart')}}" class="add-cart"
-                                        onclick="doAddCartMore({{$product->id}},'{{$product->title}}','{{$product->slug}}','{{asset('public/img/post/' . $product->cover)}}',{{$product->price}});">Mua
-                                        ngay <i class="fa fa-cart-plus"></i></a>
+            </div>
+            <div class="row">
+                <!-- Description  -->
+                <!-- NAVTABS ON DESKTOP  -->
+                <div class="row hidden-xs hidden-sm visible-md visible-lg mt-3">
+                    <div class="tabs-x align-center tabs-above tab-bordered">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li role="presentation" class="navtab-customized"><a href="#hcm" aria-controls="hcm"
+                                    role="tab" data-toggle="tab" class="text-brand fs-20">THÔNG TIN SẢN PHẨM</a>
+                            </li>
+                        </ul>
+                        <div class="qualities mt-3">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <p class="d-inline-block">
+                                        {!!$product->content!!}
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                    </li> -->
-                    <li>
-                        {!!$product->description!!}
-                    </li>
-                </ul>
-                <div class="clear"></div>
-            </div>
-
-            <div id="tabs">
-                <ul id="ultabs">
-                    <li data-vitri="0">Thông tin sản phẩm</li>
-                </ul>
-                <div style="clear:both"></div>
-
-                <div id="content_tabs">
-                    <div class="tab">
-                        {!!$product->content!!}
                     </div>
-                    <div class="fb-comments" data-href="{{url()->current()}}" data-numposts="5" data-width="100%"></div>
                 </div>
             </div>
-            <div class="clear"></div>
-        </div>
-
-        <div class="title_danhmuc">
-            <p>Sản phẩm liên quan</p>
-        </div>
-        <div class="show_sanpham">
-
-            @foreach($productRelated as $item)
-            <div class="pad_sp">
-                <div class="bx_sp">
-                    <a href="{{route('getProduct', ['product' => $item->slug])}}">
-                        <img class="lazy" data-src="{{asset('public/img/post/' . $item->cover)}}" alt="{{$item->title}}"
-                            style="object-fit: cover;width:270px;height: 270px;" />
-                    </a>
-                    <div class="info_sp text-center">
-                        <h3><a href="{{route('getProduct', ['product' => $item->slug])}}">{{$item->title}}</a></h3>
-                        <div class="gia text-center">
-                            <p>{{number_format($item->price)}} VND</p>
+            <!-- NAVTABS MOBILE  -->
+            <!-- Tabs menu on mobile -- drop down -->
+            <div class="panel-group visible-xs visible-sm px-3 my-3" id="accordion" role="tablist"
+                aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed d-inline-block text-uppercase full-width" role="button"
+                                data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
+                                aria-expanded="false" aria-controls="collapseTwo">
+                                THÔNG TIN SẢN PHẨM
+                            </a>
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            <div class="qualities mt-3">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                        <p class="d-inline-block">
+                                            {!!$product->content!!}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <!-- <p class="muahang">
-                                    <a onclick="doAddCart({{$item->id}},'{{$item->title}}','{{$item->slug}}','{{asset('public/img/post/' . $item->cover)}}',{{$item->price}},1);" href="javascript:void(0)">
-                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i> Thêm vào giỏ hàng
-                                    </a>
-                                </p> -->
                     </div>
                 </div>
+
             </div>
-            @endforeach
         </div>
     </div>
-    <div class="clear"></div>
-</div>
-<!---END #main_content-->
+    <!-- Related products  -->
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+        <section class="related-products col-md-12 col-lg-12 px-0">
+            <!-- Title  -->
+            <div class="sub-sidebar-header bg-blue">
+                <h4 class="text-uppercase text-white text-center p-2">
+                    <span>Sản phẩm liên quan</span>
+                </h4>
+            </div>
+            <div class="related-products-sliders col-md-12 col-lg-12">
+                <div class="product-row row best-sellers my-3">
+                    @foreach($productRelated as $item)
+                    <div class="col-md-12 ">
+
+                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 px-0">
+                            <a href="{{route('getProduct', ['product' => $item->slug])}}">
+                                <img src="{{asset('public/img/post/' . $item->cover)}}" alt="hinhanh"
+                                    class="img-responsive"></a>
+                        </div>
+
+                        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 product-caption ">
+                            <a href="#">
+                                <div>
+                                    <span><a
+                                            href="{{route('getProduct', ['product' => $item->slug])}}">{{$item->title}}</a></span>
+                                </div>
+                                <div class="price-wrapper">
+                                    <span class="price">
+                                        <span class="pricing">{{number_format($item->price)}}<span
+                                                class="currency">₫</span></span></span>
+                                </div>
+                                <div class="product-rating">
+                                    <i class="fa fa-star text-yellow"></i>
+                                    <i class="fa fa-star text-yellow"></i>
+                                    <i class="fa fa-star text-yellow"></i>
+                                    <i class="fa fa-star text-yellow"></i>
+                                    <i class="fa fa-star text-yellow"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </section>
+
+    </div>
+    <!-- End Related products  -->
+    <!-- News  -->
+    <!-- Related products  -->
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+        <section class="related-products col-md-12 col-lg-12 px-0">
+            <!-- Title  -->
+            <div class="sub-sidebar-header bg-blue">
+                <h4 class="text-uppercase text-white text-center p-2">
+                    <span>Tin tức & Sự kiện</span>
+                </h4>
+            </div>
+            <div class="latest-news col-md-12 col-lg-12 px-0">
+                <div class="product-row row best-sellers my-3">
+                    @foreach($newsRelated as $item)
+                    <div class="col-md-12 ">
+                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 px-0">
+                            <img src="{{asset('public/img/post/' . $item->cover)}}" alt="hinhanh"
+                                class="img-responsive">
+                        </div>
+                        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 product-caption ">
+                            <a href="{{route('getNews', ['news' => $item->slug])}}">
+                                <div>
+                                    <span class="fs-14">{{$item->title}}</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <!-- End news  -->
+    </div>
+</section>
+<!--============================================ PAGE CONTENT============================================  -->
 
 @endsection

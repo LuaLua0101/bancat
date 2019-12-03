@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Config;
-use Illuminate\Http\Request;
-use App\Product;
-use App\News;
-use App\Store;
 use App\Cart;
+use App\Config;
+use App\News;
+use App\Product;
+use App\Store;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class MainController extends Controller
@@ -26,10 +26,10 @@ class MainController extends Controller
         $newsModel = new News();
         $newss = $newsModel->getListNews();
         $this->data['newss'] = $newss;
+        $this->data['list5'] = $productModel->getList5Product();
 
         // echo "<pre>";
         // print_r($products);die;
-        
 
         return view('frontend.index', $this->data);
 
@@ -59,7 +59,7 @@ class MainController extends Controller
 
         if (array_search($cate, config('config.cate')) === false) {
             return $this->getProduct($cate);
-        }else{
+        } else {
             $productModel = new Product();
             $products = $productModel->getListProductByType(array_search($cate, config('config.cate')));
             $this->data['products'] = $products;
@@ -68,7 +68,7 @@ class MainController extends Controller
 
             return view('frontend.product', $this->data);
         }
-        
+
     }
 
     /**
@@ -78,6 +78,7 @@ class MainController extends Controller
     {
 
         $productModel = new Product();
+        $newsModel = new News();
         $product = $productModel->getProductBySlug($product);
 
         if ($product) {
@@ -85,11 +86,12 @@ class MainController extends Controller
             $this->data['productRelated'] = $productRelated;
 
             $this->data['product'] = $product;
-            $this->data['cate_name'] = config('config.cate_name')[$product->type][0];
+            $this->data['newsRelated'] = $newsModel->getList3NewestNews();
+            // $this->data['cate_name'] = config('config.cate_name')[$product->type][0];
 
             config(['config.title' => $product->title, 'config.description' => $product->description]);
             return view('frontend.product-detail', $this->data);
-        }else{
+        } else {
             return view('404', $this->data);
         }
     }
@@ -103,6 +105,7 @@ class MainController extends Controller
         $newsModel = new News();
         $newss = $newsModel->getListNews();
         $this->data['newss'] = $newss;
+        $this->data['news_5'] = $newsModel->getList5NewestNews();
 
         return view('frontend.news', $this->data);
 
@@ -119,12 +122,12 @@ class MainController extends Controller
 
         if ($news) {
             $newsRelated = $newsModel->getListNewsRelate($news->slug);
-            $this->data['newsRelated'] = $newsRelated;
+            $this->data['newsRelated'] = $newsModel->getList5NewestNews();
 
             $this->data['news'] = $news;
             config(['config.title' => $news->title, 'config.description' => $news->description]);
             return view('frontend.news-detail', $this->data);
-        }else{
+        } else {
             return view('404', $this->data);
         }
     }
@@ -159,7 +162,7 @@ class MainController extends Controller
             $this->data['store'] = $store;
             config(['config.title' => $store->title]);
             return view('frontend.store-detail', $this->data);
-        }else{
+        } else {
             return view('404', $this->data);
         }
     }
@@ -193,15 +196,15 @@ class MainController extends Controller
 
         // Check product in cart
         $carts = json_decode($cart, true);
-        if(isset($carts[0]) && count($carts[0]) > 0){
+        if (isset($carts[0]) && count($carts[0]) > 0) {
             $carts = $carts[0];
-        }else{
+        } else {
             return back();
         }
         $productIds = [];
 
         foreach ($carts as $key => $value) {
-            if ($value){
+            if ($value) {
                 $productIds[] = $key;
             }
         }

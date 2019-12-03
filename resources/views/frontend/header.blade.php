@@ -8,21 +8,20 @@
                  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                      <div class="py-2">
                          <i class="fa fa-home text-white" aria-hidden="true"></i>
-                         <span class="text-uppercase text-white">Trung tâm dạy trượt patin Thịnh Nguyễn</span>
+                         <span class="text-uppercase text-white">CÔNG TY TNHH SX TM DV SÁU HOÀNG</span>
                      </div>
                  </div>
 
                  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-right py-2 topbar-right visible-md visible-lg">
 
-                     <a href="mailto:daytruotpatin@gmail.com" class="email" target="_blank">
+                     <a href="mailto:cokhisauhoang@gmail.com" class="email" target="_blank">
                          <i class="fa fa-envelope text-pale-grey" aria-hidden="true"></i>
-                         <span class="text-pale-grey">daytruotpatin@gmail.com</span>
+                         <span class="text-pale-grey">cokhisauhoang@gmail.com</span>
                      </a>
                      <a href="tel:+0908688589" target="_blank">
                          <i class="fa fa-phone text-pale-grey" aria-hidden="true"></i>
                          <span class="text-pale-grey">
-                             0908.688.589
-
+                             0972925492
                          </span>
                      </a>
 
@@ -43,7 +42,7 @@
                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 px-0">
                          <a href="./index.html" target="_blank" class="main-logo">
                              <h1>
-                                 <img src="./images/logo.png" alt="Logo" title="Patin">
+                                 <img src="{{asset('public/bancat/images/logo.png')}}" alt="Logo" title="Patin">
                              </h1>
                          </a>
                      </div>
@@ -57,7 +56,9 @@
                          <!-- block service  -->
                          <div class="block-service col-md-4 col-lg-4 px-0">
                              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 px-0">
-                                 <img class="service-icn" src="./images/chips/giao-hang-toan-quoc.png" alt="giao hàng">
+                                 <img class="service-icn"
+                                     src="{{asset('public/bancat/images/chips/giao-hang-toan-quoc.png')}}"
+                                     alt="giao hàng">
                              </div>
                              <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 pl-0">
                                  <span>
@@ -70,11 +71,12 @@
                          <!-- Blog service  -->
                          <div class="block-service col-md-4 col-lg-4 px-0">
                              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 px-0">
-                                 <img class="service-icn" src="./images/chips/tu-van-mien-phi.png" alt="giao hàng">
+                                 <img class="service-icn"
+                                     src="{{asset('public/bancat/images/chips/tu-van-mien-phi.png')}}" alt="giao hàng">
                              </div>
                              <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 pl-0">
                                  <span>
-                                     <strong>Hotline: 0908688589</strong>
+                                     <strong>Hotline: 0972925492</strong>
                                      <span>tư vấn 24/7 miễn phí</span>
                                  </span>
                              </div>
@@ -83,7 +85,9 @@
                          <!-- Blog service  -->
                          <div class="block-service col-md-4 col-lg-4 px-0">
                              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 px-0">
-                                 <img class="service-icn" src="./images/chips/giao-hang-toan-quoc.png" alt="giao hàng">
+                                 <img class="service-icn"
+                                     src="{{asset('public/bancat/images/chips/giao-hang-toan-quoc.png')}}"
+                                     alt="giao hàng">
                              </div>
                              <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 pl-0">
                                  <span>
@@ -126,17 +130,9 @@
                  <ul class="visible-xs visible-sm">
                      <li class="d-inline-block">
                          <a href="./index.html" target="_blank" class="main-logo">
-                             <img src="./images/logo.png" alt="Logo" title="Patin" width="200" class="py-2">
+                             <img src="./public/bancat/images/logo.png" alt="Logo" title="Patin" width="200"
+                                 class="py-2">
                          </a>
-                     </li>
-                     <li class="d-inline-block">
-                         <!-- Cart  -->
-                         <a href="#">
-                             <button class="btn btn-primary ml-2">
-                                 <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                             </button>
-                         </a>
-
                      </li>
                  </ul>
              </div>
@@ -144,8 +140,8 @@
              <!-- Collect the nav links, forms, and other content for toggling -->
              <div class="collapse navbar-collapse navbar-ex1-collapse">
                  <ul class="nav navbar-nav">
-                     <li class="active"><a href="#">Trang chủ</a></li>
-                     <li><a href="#">Giới thiệu</a></li>
+                     <li class="active"><a href="{{route('getHome')}}">Trang chủ</a></li>
+                     <!-- <li><a href="#">Giới thiệu</a></li> -->
                      <!-- <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Khóa học patin <b
                                     class="caret"></b></a>
@@ -157,7 +153,8 @@
                             </ul>
                         </li> -->
                      <li class="dropdown">
-                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sản phẩm<b class="caret"></b></a>
+                         <a href="{{route('getAllProduct')}}" class="dropdown-toggle" data-toggle="dropdown">Sản phẩm<b
+                                 class="caret"></b></a>
                          <ul class="dropdown-menu">
                              @foreach( config('config.cate_name') as $cateKey => $cateInfo )
                              <li>
@@ -167,9 +164,9 @@
                              @endforeach
                          </ul>
                      </li>
-                     <li><a href="#">Tin tức</a></li>
+                     <li><a href="{{route('getAllNews')}}">Tin tức</a></li>
                      <!-- <li><a href="#">Đặt hàng</a></li> -->
-                     <li><a href="#">Liên hệ</a></li>
+                     <li><a href="{{route('getContact')}}">Liên hệ</a></li>
                  </ul>
 
                  <!-- <ul class="nav navbar-nav navbar-right">

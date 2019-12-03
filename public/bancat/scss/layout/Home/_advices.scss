@@ -1,0 +1,12 @@
+// advices
+.advices {
+    .subscribe-link{
+        height: 9rem;
+        >a {
+            display: block;
+            padding: 1rem 2rem;
+            text-align: center;
+            margin: 2.5rem 0;
+        }
+    }
+}

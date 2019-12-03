@@ -1,0 +1,47 @@
+.best-sellers{
+    // product block 
+    .product-block{
+        &:hover{
+            cursor: pointer;
+            .product-caption{
+                background: $blue;
+                color: $white;
+            }
+            .product-title{
+                a{
+                    color: $white;
+                }
+            }
+            .pricing{
+                color: $white;
+            }
+        }
+    }
+    .product-img{
+        position: relative;
+        .discount-rate{
+            position: absolute;
+            background: red;
+            color: $white;
+            left: 0;
+            top: 0;
+            padding: 10px;
+            border-bottom-right-radius: 15px;
+            border-top-left-radius: 3px;
+        }
+    }
+    .product-caption{
+        transition: all 0.5s;
+        
+        h3{
+            font-size: 14px;
+        }
+        .pricing{
+            color: red;
+        }
+        .discount-price{
+            font-size: 13px;
+            color: $grey;
+        }
+    }
+}

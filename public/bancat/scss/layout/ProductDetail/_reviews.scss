@@ -1,0 +1,37 @@
+.reviews{
+    max-height: 33rem;
+    overflow-y: scroll;
+    // review item 
+    .review-item{
+     .rating-author-txt{
+         padding: 15px;
+         border: 1px solid $grey;
+         position: relative;
+         .rating-stars-author{
+             position: absolute;
+             padding-right: inherit;
+             right: 0;
+         }
+     }   
+
+    }
+}
+
+@media (max-width:992px){
+    .reviews .review-item {
+        margin-bottom: 10px;
+        .rating-author-pic{
+            padding: 0;
+        }
+
+        .rating-author-txt 
+        {
+            margin-bottom: 30px;
+            .rating-stars-author{
+                position: unset;
+                text-align-last: left;
+            }
+        }
+    }
+
+}

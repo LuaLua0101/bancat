@@ -1,0 +1,49 @@
+.slick-prev{
+    left: 6px;
+    z-index: 3;
+    width: unset;
+    height: unset;
+    background: rgba(103, 167, 222, 0.5);
+    transition: all 0.5s;
+    &::before{
+        content: "\f053";
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: 1rem;
+        color: $white;
+        border-color: transparent;
+        padding: 1rem 0.5rem;
+        display: inline-block;
+    }
+    &:hover{
+        background: $blue-light-2;
+        &::before{
+            color: $white;
+            border-color: transparent;
+        }
+    }
+}
+
+.slick-next{    
+    right: 6px;
+    z-index: 3;
+    width: unset;
+    height: unset;
+    background: rgba(103, 167, 222, 0.5);
+    transition: all 0.5s;
+    &::before{
+        content: "\f054";
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: 1rem;
+        color: $white;
+        border-color: transparent;
+        padding: 1rem 0.5rem;
+        display: inline-block;
+    }
+    &:hover{
+        background: $blue-light-2;
+        &::before{
+            color: $white;
+            border-color: transparent;
+        }
+    }
+}

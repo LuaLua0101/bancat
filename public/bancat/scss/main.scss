@@ -1,0 +1,33 @@
+@import "./variables/variables";
+@import "./variables/mixin";
+// global
+@import "./utilsClasses/spacingClasses";
+@import "./utilsClasses/colorClasses";
+@import "./utilsClasses/displayClasses";
+@import "./utilsClasses/sizeClasses";
+@import "./utilsClasses/fontClasses";
+
+@import "./components/breadcum";
+@import "./components/slick-override";
+@import "./components/sidebar";
+@import "./components/pagination";
+@import "./layout/global";
+
+
+
+@import "./shared/header";
+/***************PAGES**************/
+
+@import "./layout/home";
+@import "./layout/productListpage";
+@import "./layout/productDetail";
+@import "./layout/contactPage";
+@import "./layout/blogsList";
+@import "./layout/blogDetail";
+/********************************/
+@import "./shared/footer";
+
+// extra components
+@import "./components/goTopBtn";
+@import "./components/mailToBtn";
+@import "./components/accordition";

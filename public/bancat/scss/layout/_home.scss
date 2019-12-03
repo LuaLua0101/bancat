@@ -1,0 +1,12 @@
+@import "./Home/categoriesBar";
+@import "./Home/slider";
+@import "./Home/qualitiesBlock";
+@import "./Home/best-seller";
+@import "./Home/latest_news";
+@import "./Home/advices";
+
+@media(max-width:992px){
+    .homepage{
+        overflow: hidden;
+    }
+}

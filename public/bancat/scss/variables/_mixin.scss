@@ -1,0 +1,33 @@
+@mixin marginUtil($variables) {
+    margin: $variables
+}
+@mixin marginYUtil($variables) {
+    margin-top: $variables;
+    margin-block: $variables;
+}
+@mixin marginXUtil($variables) {
+    margin-left: $variables;
+    margin-right: $variables;
+}
+@mixin paddingUtil($variables) {
+    padding: $variables;
+}
+@mixin paddingYUtil($variables) {
+    padding-top: $variables;
+    padding-bottom: $variables;
+}
+@mixin paddingXUtil($variables) {
+    padding-left: $variables;
+    padding-right: $variables;
+}
+@mixin paddingBottomUtil($variables) {
+    padding-bottom: $variables;
+}
+@mixin paddingXUtil($variables) {
+    padding-left: $variables;
+    padding-right: $variables;
+}
+@mixin paddingXUtil($variables) {
+    padding-left: $variables;
+    padding-right: $variables;
+}

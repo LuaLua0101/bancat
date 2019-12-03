@@ -1,0 +1,149 @@
+/**************************************/
+/*          1. HEADER                 */
+/**************************************/
+header {
+  .topbar {
+    background: $black;
+    font-size: 14px;
+    i {
+      font-size: 12px;
+    }
+    .topbar-right {
+      i {
+        font-size: 14px;
+      }
+      font-size: 12px;
+      .email {
+        position: relative;
+        &::before {
+          position: absolute;
+          content: "";
+          width: 1px;
+          height: 80%;
+          background: $dark-grey;
+          right: 0;
+          margin-right: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        padding-right: 20px;
+      }
+    }
+  }
+
+  /****************Main menu *****************/
+  .main-menu {
+    .main-logo {
+      img {
+        max-width: 290px;
+      }
+    }
+    .block-service {
+      padding: 5% 0;
+      .service-icn {
+        max-width: 35px;
+      }
+    }
+    .cart {
+      padding: 4% 0;
+    }
+  }
+  .main-nav {
+    background: $blue-light;
+    color: $white;
+    text-transform: uppercase;
+    padding: 0;
+    .navbar-ex1-collapse{
+      padding: 0;
+    }
+    .nav {
+      li a {
+        color: $white;
+        padding: 15px 10px;
+        &:hover{
+            background-color: $blue;
+            color: $white;
+        }
+      }
+      li.active {
+        a {
+          background: $blue-light-2;
+          color: $white;
+          &:hover{
+              background: $blue;
+              color: $white;
+          }
+        }
+      }
+      .dropdown-menu{
+          a{
+              color: $black;
+          }
+      }
+    }
+    .search-form {
+      > div {
+        position: relative;
+        input {
+          border-radius: 15px;
+          box-shadow: unset;
+          border-color: $blue-light-2;
+          background: $blue-light-2;
+          color: $white;
+          &::placeholder {
+            color: $white;
+          }
+          &:focus {
+            box-shadow: unset;
+            border-color: $blue-light-2;
+            outline: unset;
+            + button {
+              outline: unset;
+            }
+          }
+        }
+        button[type="submit"] {
+          border-top-right-radius: 15px;
+          background: $blue-light-2;
+          color: $white;
+          border-bottom-right-radius: 15px;
+          border-left: 0px;
+          border-bottom-left-radius: 0;
+          position: absolute;
+          right: 0;
+          border-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px){
+  header{
+
+    .main-nav{
+      .search-form{
+        padding: 10px 20px;
+      }
+      .navbar-ex1-collapse{
+        padding: 0 15px;
+        .mobile-search{
+          display: inline-block;
+        }
+      }
+    }
+
+    .navbar-toggle{
+      float: left;
+      border: none;
+      margin-left: 15px;
+      padding: 10% 2%;
+    }
+    .navbar-default .navbar-toggle .icon-bar{
+      background: $white;
+    }
+    .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
+      background: transparent;
+    }
+  } 
+}

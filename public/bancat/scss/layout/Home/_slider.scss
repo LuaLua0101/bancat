@@ -1,0 +1,13 @@
+/**************************************/
+/*         3. HOMEPAGE Sliders        */
+/**************************************/
+.homepage-sliders{
+    .block-slider{
+        max-height: 27rem;
+        overflow: hidden;
+        img{
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+}

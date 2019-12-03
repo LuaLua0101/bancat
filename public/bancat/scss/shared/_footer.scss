@@ -1,0 +1,42 @@
+// Footer
+.footer{
+   background: $black-soft;
+    color: $white;
+    .footer-content{
+        padding: 3% 0;
+        a{
+            color: $white;
+            transition: all 0.5s;
+            &:hover{
+                color:$blue-light;
+            }
+        }
+    }
+    .contact-info{
+        li{
+            list-style-type: disc;
+        }
+    }
+}
+
+// Footer mobile
+@media only screen and (max-width:992px){
+    .footer{
+        .tabs-x{
+            li.navtab-customized{
+                display: block;
+                text-align: center;
+                padding: 0 5%;
+                a.sp-toggle-nav{
+                    border: 2px solid white;
+                    font-size: 14px;
+                    padding: 1rem 2rem;
+                    float: none;
+                    width: 100%;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+}

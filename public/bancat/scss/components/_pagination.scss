@@ -1,0 +1,49 @@
+
+.pagination {
+    @media #{$xs-device} {
+      text-align: center;
+    }
+  
+    li {
+  
+      &:last-child {
+        margin-right: 0;
+      }
+  
+      a {
+        color: #a7a7a7;
+      }
+  
+      &:hover, &.active {
+        a {
+          color: $black;
+        }
+      }
+    }
+  
+    &--2 {
+      li {
+        a {
+          border: 1px solid $blue;
+          display: block;
+          margin-right: 20px;
+          text-align: center;
+          padding: 0;
+          line-height: 45px;
+          height: 45px;
+          width: 45px;
+          background: $blue;
+          color: $white;
+          border-radius: 0;
+        }
+  
+        &:hover, &.active {
+          a {
+            border-color: $blue;
+            color: $blue;
+            background-color: $white;
+          }
+        }
+      }
+    }
+  }

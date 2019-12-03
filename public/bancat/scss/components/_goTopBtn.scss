@@ -1,0 +1,17 @@
+#goTop{
+    position: fixed;
+    bottom: 6%;
+    right: 6%;
+    z-index: 999;
+    background: $blue-light-2;
+    padding: 10px;
+    color: $white;
+    border-radius: 15px;
+}
+
+@media only screen and (max-width:992px){
+    #goTop{
+        bottom: 19%;
+        right: 6%;
+    }
+}

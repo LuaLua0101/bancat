@@ -1,0 +1,31 @@
+// Contact page
+.contact-page {
+  // Search results
+  .search-results {
+    .store-list {
+      max-height: 38rem;
+      overflow-y: scroll;
+    }
+  }
+
+  iframe {
+    height: 38rem;
+  }
+  // qualities 
+  .qualities{
+    strong{
+        letter-spacing: 2px;
+    } 
+  }
+}
+
+@media only screen and (max-width: 992px){
+    .contact-page{
+        select{
+            margin-bottom: 1rem;
+        }
+        .qualities .title{
+            text-align: center;
+        }
+    }
+}

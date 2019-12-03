@@ -1,0 +1,45 @@
+// filter results
+.filter-results{
+    margin: 3% 0;
+    font-size: 15px;
+   .filter-sorting{
+       select{
+        border: none;
+        padding-top: 7px;
+       
+        border: 1px solid #ebebeb;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        line-height: 15px;
+        font-size: 12px;
+        width: 170px;
+        margin-bottom: 0;
+       }
+   }
+    .style-view:hover, .style-view.active{
+        color: $blue;
+        cursor: pointer;
+    }
+    .filter-pagination{
+        text-align: right;
+        li{
+            display: inline-block;
+            height: 20px;
+            border: 1px solid $grey;
+            text-align: center;
+            width: 20px;
+            line-height: 20px;
+            &:hover{
+                cursor: pointer;
+            }
+            &.active{
+                border: 1px solid $blue;
+            }
+        }
+    }
+    // Classes for horizontal display
+    .block-margin{
+        padding: 6% 3%;
+    }
+}

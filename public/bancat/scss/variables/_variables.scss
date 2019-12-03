@@ -1,0 +1,43 @@
+// Spacing
+$spacing-level-1 : 0;
+$spacing-level-2: 0.25rem;
+$spacing-level-3: 0.5rem;
+$spacing-level-4: 1rem;
+$spacing-level-5: 2rem;
+// colors
+$red: #e41b26;
+$sub-color: #F15A22;
+$yellow: #fde16d;
+$white: #ffff;
+$black: #000;
+$grey: #c1bebf;
+$dark-grey: #656363;
+$pale-grey: #e6e6e6;
+$light-grey: #f8f8f8;
+$pale-pink: #ecabb7;
+$dark-brown: #6D0000;
+$wine-color: #800202;
+$paragraph: #303030;
+$black-soft: #1b1b1c;
+$headingColor: #1b1b1c;
+$blue-light: #0588fa;
+$blue-light-2: #37a0fb;
+$blue: #055dc7;
+// Text
+$baseFont: 'Times New Roman',serif;
+$green-heading: #008000;
+//== Social Media Icons Color
+$facebook: #3B5999;
+$twitter: #1DA1F2;
+$pinterest: #CB2028;
+$youtube: #CC332D;
+$reddit: #FF4500;
+
+//== Responsive Media Query Variables
+$xlmax-device: 'only screen and (min-width: 1200px) and (max-width: 1599.98px)';
+$xl-device: 'only screen and (min-width: 1200px)';
+$lg-device: 'only screen and (min-width: 992px) and (max-width: 1199.98px)';
+$md-device: 'only screen and (min-width: 768px) and (max-width: 991.98px)';
+$sm-device: 'only screen and (max-width: 767.98px)';
+$xs-device: 'only screen and (max-width: 575.98px)';
+$xxs-device: 'only screen and (max-width: 479.98px)';

@@ -53,32 +53,32 @@ header {
     color: $white;
     text-transform: uppercase;
     padding: 0;
-    .navbar-ex1-collapse{
+    .navbar-ex1-collapse {
       padding: 0;
     }
     .nav {
       li a {
         color: $white;
-        padding: 15px 10px;
-        &:hover{
-            background-color: $blue;
-            color: $white;
+        padding: 15px 20px;
+        &:hover {
+          background-color: $blue;
+          color: $white;
         }
       }
       li.active {
         a {
           background: $blue-light-2;
           color: $white;
-          &:hover{
-              background: $blue;
-              color: $white;
+          &:hover {
+            background: $blue;
+            color: $white;
           }
         }
       }
-      .dropdown-menu{
-          a{
-              color: $black;
-          }
+      .dropdown-menu {
+        a {
+          color: $black;
+        }
       }
     }
     .search-form {
@@ -118,32 +118,32 @@ header {
   }
 }
 
-@media (max-width: 992px){
-  header{
-
-    .main-nav{
-      .search-form{
+@media (max-width: 992px) {
+  header {
+    .main-nav {
+      .search-form {
         padding: 10px 20px;
       }
-      .navbar-ex1-collapse{
+      .navbar-ex1-collapse {
         padding: 0 15px;
-        .mobile-search{
+        .mobile-search {
           display: inline-block;
         }
       }
     }
 
-    .navbar-toggle{
+    .navbar-toggle {
       float: left;
       border: none;
       margin-left: 15px;
       padding: 10% 2%;
     }
-    .navbar-default .navbar-toggle .icon-bar{
+    .navbar-default .navbar-toggle .icon-bar {
       background: $white;
     }
-    .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
+    .navbar-default .navbar-toggle:focus,
+    .navbar-default .navbar-toggle:hover {
       background: transparent;
     }
-  } 
+  }
 }

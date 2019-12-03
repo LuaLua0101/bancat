@@ -24,7 +24,6 @@
                         <section class="blog-post-txt-wrap">
                             <div class="blog-post-txt">
                                 <h2>{{$news->description}}</h2>
-
                                 {!!$news->content!!}
                             </div>
 
@@ -66,7 +65,7 @@
                                     <div class="content">
                                         <a href="{{route('getNews', ['news' => $item->slug])}}"
                                             class="title">{{$item->title}}</a>
-                                        <p>There are simple hand-held tire-pressure gauges which can..</p>
+                                        <p>{{$item->description}}</p>
                                     </div>
                                 </div>
                                 @endforeach

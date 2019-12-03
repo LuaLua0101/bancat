@@ -31,7 +31,7 @@
 
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                     <h4 class="text-uppercase">Liên hệ</h4>
-                    <ul class="contact-info">
+                    <ul >
                         <li class="my-3">
                             <img src="{{asset('public/bancat/images/logo.png')}}" alt="Logo" title="Patin" width="500"
                                 class="img-responsive">

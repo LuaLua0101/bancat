@@ -22,6 +22,12 @@ class News extends Model
     {
         return News::where('id', '=', $id)->first();
     }
+
+    public function getIntro()
+    {
+        return News::where('type', '!=', null)->first();
+    }
+
     public function getNewsBySlug($slug)
     {
         return News::where('slug', '=', $slug)->first();

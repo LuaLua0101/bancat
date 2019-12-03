@@ -141,7 +141,7 @@
              <div class="collapse navbar-collapse navbar-ex1-collapse">
                  <ul class="nav navbar-nav">
                      <li class="active"><a href="{{route('getHome')}}">Trang chủ</a></li>
-                     <!-- <li><a href="#">Giới thiệu</a></li> -->
+                     <li><a href="{{route('getIntro')}}">Giới thiệu</a></li>
                      <!-- <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Khóa học patin <b
                                     class="caret"></b></a>

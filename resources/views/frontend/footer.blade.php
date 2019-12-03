@@ -9,6 +9,8 @@
                     <li class="mb-3"><a href="{{route('getContact')}}"><i class="fa fa-chevron-right mr-2"
                                 aria-hidden="true"></i>Liên
                             hệ</a></li>
+                    <li class="mb-3"><a href="{{route('getIntro')}}"><i class="fa fa-chevron-right mr-2"
+                                aria-hidden="true"></i>Giới thiệu</a></li>
                 </ul>
             </div>
 

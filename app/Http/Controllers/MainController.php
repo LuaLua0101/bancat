@@ -35,6 +35,14 @@ class MainController extends Controller
 
     }
 
+    public function getIntro()
+    {
+        $newsModel = new News();
+        $news = $newsModel->getIntro();
+        return view('frontend.intro', ['news' => $news]);
+
+    }
+
     /**
      * Get product page
      */

@@ -82,9 +82,7 @@ Route::middleware(['runall'])->group(function () {
     // END Admin ***********
 
     // FRONDEND ***********
-    Route::get('/gioi-thieu', function () {
-        return view('frontend.intro');
-    })->name('getIntro');
+    Route::get('/gioi-thieu', 'MainController@getIntro')->name('getIntro');
     Route::get('/lien-he', function () {
         return view('frontend.contact');
     })->name('getContact');

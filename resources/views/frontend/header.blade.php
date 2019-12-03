@@ -130,7 +130,7 @@
                  <ul class="visible-xs visible-sm">
                      <li class="d-inline-block">
                          <a href="{{route('getHome')}}" target="_blank" class="main-logo">
-                             <img src="./public/bancat/images/logo.png" alt="Logo" title="Patin" width="200"
+                             <img src="{{asset('public/bancat/images/logo.png')}}" alt="Logo" title="Patin" width="200"
                                  class="py-2">
                          </a>
                      </li>

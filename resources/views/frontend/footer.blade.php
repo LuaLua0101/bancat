@@ -33,10 +33,8 @@
                     <h4 class="text-uppercase">Liên hệ</h4>
                     <ul class="contact-info">
                         <li class="my-3">
-                            <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline"
-                                data-width="" data-height="" data-small-header="false" data-adapt-container-width="true"
-                                data-hide-cover="false">
-                            </div>
+                        <img src="{{asset('public/bancat/images/logo.png')}}" alt="Logo" title="Patin" width="500"
+                                 class="py-2">
                         </li>
                     </ul>
                 </div>

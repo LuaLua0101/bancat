@@ -37,7 +37,7 @@
                             Mã Số Sản Phẩm: <span class="text-grey">13223 - 13210</span>
                         </div>
 
-                        <div class="price text-brand my-4 fs-20">
+                        <div class="price text-brand my-1 fs-20">
                             {{number_format($product->price)}} ₫
                         </div>
                         <div class="prod-desc">
@@ -48,7 +48,7 @@
                             <br /><br />
                             <!-- <button class="bg-blue-light full-width btn my-3"><a href="#" class="text-white fs-20">Thêm
                                     vào giỏ hàng</a></button> -->
-                            <div class="text-center">
+                            <div>
                                 Gọi đặt mua: <a class="text-brand" href="tel:0972925492">0972925492<time
                                         class="text-black"> (7:30-21:30)</time></a>
                             </div>

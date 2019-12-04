@@ -11,19 +11,23 @@
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                     <div class="product-images">
                         <div class="slider-for">
-                        @foreach(json_decode($product->list_img,true) as $img)
+                            @foreach(json_decode($product->list_img,true) as $img)
                             <img src="{{asset('public/img/post/' . $img)}}"
-                                class="img-responsive" alt="Item 1">
-                                @endforeach
-                            <img src="{{asset('public/img/post/' .$product->cover)}}" class="img-responsive" alt="Item 1">
+                                style="object-fit: cover;width: 409px;height: 409px;" class="img-responsive"
+                                alt="Item 1">
+                            @endforeach
+                            <img src="{{asset('public/img/post/' .$product->cover)}}" class="img-responsive"
+                                alt="Item 1">
                         </div>
                         <div class="slider-nav mt-3">
-                        @foreach(json_decode($product->list_img,true) as $img)
+                            @foreach(json_decode($product->list_img,true) as $img)
                             <img src="{{asset('public/img/post/' . $img)}}"
-                                class="img-responsive mr-3" alt="Item 1">
-                                @endforeach
+                                style="object-fit: cover;width: 87px;height: 87px;" class="img-responsive mr-3"
+                                alt="Item 1">
+                            @endforeach
 
-                            <img src="{{asset('public/img/post/' .$product->cover)}}" class="img-responsive mr-3" alt="Item 1">
+                            <img src="{{asset('public/img/post/' .$product->cover)}}" class="img-responsive mr-3"
+                                alt="Item 1">
                         </div>
                     </div>
                 </div>
@@ -43,10 +47,10 @@
                         </div> -->
 
                         <div class="price text-brand my-4 fs-20">
-                        {{number_format($product->price)}} ₫
+                            {{number_format($product->price)}} ₫
                         </div>
                         <div class="prod-desc">
-                        {!!$product->description!!}
+                            {!!$product->description!!}
                         </div>
                         <!-- Actions  -->
                         <div>
@@ -82,7 +86,7 @@
                                     <div class="row">
                                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                             <p class="d-inline-block">
-                                            {!!$product->content!!}
+                                                {!!$product->content!!}
                                             </p>
                                         </div>
                                     </div>
@@ -110,7 +114,7 @@
                         <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
                             aria-labelledby="headingOne">
                             <div class="panel-body">
-                                <p>       {!!$product->content!!}</p>
+                                <p> {!!$product->content!!}</p>
                             </div>
                         </div>
                     </div>
@@ -122,53 +126,54 @@
         <!-- Related products  -->
 
         <div class="col-lg-3 my-4">
-                    <div class="sidebar-area">
-                        <div class="sidebar-item">
-                            <h4 class="sidebar-title">Sản phẩm liên quan</h4>
-                            <div class="sidebar-body">
-                            @foreach($productRelated as $item)
-                                <div class="sidebar-product">
-                                    <a href="{{route('getProduct', ['product' => $item->slug])}}" class="image"><img
-                                            src="{{asset('public/img/post/'.$item->cover)}}" alt="{{$item->title}}"
-                                            class="img-responsive"></a>
-                                    <div class="content">
-                                        <a href="{{route('getProduct', ['product' => $item->slug])}}"
-                                            class="title">{{$item->title}}</a>
-                                            <div class="price-wrapper">
-                                        <span class="price">
-                                            <span class="pricing">{{number_format($item->price)}}<span class="currency">₫</span></span></span>
-                                    </div>
-                                    </div>
+            <div class="sidebar-area">
+                <div class="sidebar-item">
+                    <h4 class="sidebar-title">Sản phẩm liên quan</h4>
+                    <div class="sidebar-body">
+                        @foreach($productRelated as $item)
+                        <div class="sidebar-product">
+                            <a href="{{route('getProduct', ['product' => $item->slug])}}" class="image"><img
+                                    src="{{asset('public/img/post/'.$item->cover)}}" alt="{{$item->title}}"
+                                    class="img-responsive"></a>
+                            <div class="content">
+                                <a href="{{route('getProduct', ['product' => $item->slug])}}"
+                                    class="title">{{$item->title}}</a>
+                                <div class="price-wrapper">
+                                    <span class="price">
+                                        <span class="pricing">{{number_format($item->price)}}<span
+                                                class="currency">₫</span></span></span>
                                 </div>
-                                @endforeach
                             </div>
                         </div>
+                        @endforeach
                     </div>
                 </div>
+            </div>
+        </div>
         <!-- End Related products  -->
         <!-- News  -->
         <!-- Related products  -->
-            <div class="col-lg-3 my-4">
-                    <div class="sidebar-area">
-                        <div class="sidebar-item">
-                            <h4 class="sidebar-title">Các bài viết mới nhất</h4>
-                            <div class="sidebar-body">
-                                @foreach($newsRelated as $item)
-                                <div class="sidebar-product">
-                                    <a href="{{route('getNews', ['news' => $item->slug])}}" class="image"><img
-                                            src="{{asset('public/img/post/'.$item->cover)}}" alt="{{$item->title}}"
-                                            class="img-responsive"></a>
-                                    <div class="content">
-                                        <a href="{{route('getNews', ['news' => $item->slug])}}"
-                                            class="title">{{$item->title}}</a>
-                                        <p>{{$item->description}}</p>
-                                    </div>
-                                </div>
-                                @endforeach
+        <div class="col-lg-3 my-4">
+            <div class="sidebar-area">
+                <div class="sidebar-item">
+                    <h4 class="sidebar-title">Các bài viết mới nhất</h4>
+                    <div class="sidebar-body">
+                        @foreach($newsRelated as $item)
+                        <div class="sidebar-product">
+                            <a href="{{route('getNews', ['news' => $item->slug])}}" class="image"><img
+                                    src="{{asset('public/img/post/'.$item->cover)}}" alt="{{$item->title}}"
+                                    class="img-responsive"></a>
+                            <div class="content">
+                                <a href="{{route('getNews', ['news' => $item->slug])}}"
+                                    class="title">{{$item->title}}</a>
+                                <p>{{$item->description}}</p>
                             </div>
                         </div>
+                        @endforeach
                     </div>
                 </div>
+            </div>
+        </div>
         <!-- End news  -->
     </div>
 </section>

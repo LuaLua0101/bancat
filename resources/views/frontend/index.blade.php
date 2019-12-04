@@ -24,18 +24,12 @@
 
                 <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                     <div class="homepage-sliders">
+                        @foreach($list_banner as $item)
                         <div class="block-slider">
-                            <img src="{{asset('public/bancat/images/banner/day-ky-thuat-truot-patin-tai-trung-tam-thinh-nguyen.jpg')}}"
-                                alt="banner" class="img-responsive mx-auto">
-                        </div>
-                        <div class="block-slider">
-                            <img src="{{asset('public/bancat/images/banner/patin11.jpg')}}" alt="banner"
+                            <img src="{{asset('public/img/banners/' . $item->url)}}" alt="{{$item->id}}"
                                 class="img-responsive mx-auto">
                         </div>
-                        <div class="block-slider">
-                            <img src="{{asset('public/bancat/images/banner/patin11.jpg')}}" alt="banner"
-                                class="img-responsive mx-auto">
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

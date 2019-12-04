@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Banner;
 use App\Cart;
 use App\Config;
 use App\News;
@@ -20,6 +21,7 @@ class MainController extends Controller
     {
 
         $productModel = new Product();
+        $bannerModel = new Banner();
         $products = $productModel->getListProduct()->groupBy('type');
         $this->data['products'] = $products;
 
@@ -27,6 +29,7 @@ class MainController extends Controller
         $newss = $newsModel->getListNews();
         $this->data['newss'] = $newss;
         $this->data['list5'] = $productModel->getList5Product();
+        $this->data['list_banner'] = $bannerModel->getList();
 
         // echo "<pre>";
         // print_r($products);die;

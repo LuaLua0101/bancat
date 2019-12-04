@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Banner;
+use App\Cart;
+use App\Cate;
 use App\Config;
 use App\News;
 use App\Product;
 use App\Store;
-use App\Cate;
 use App\User;
-use App\Cart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -197,6 +198,15 @@ class AdminController extends Controller
     }
 
     /**
+     * Get add banner page
+     */
+    public function getAddBanner()
+    {
+
+        return view('admin.banner_add', $this->data);
+    }
+
+    /**
      * Post add product page
      */
     public function postAddProduct(Request $request)
@@ -302,6 +312,48 @@ class AdminController extends Controller
             return redirect()->route('adgetListProduct')->with('success', 'Thêm thành công!');
         } else {
             return redirect()->route('adgetListProduct')->with('error', 'Thêm thất bại!');
+        }
+
+    }
+
+    public function generateRandomString($length = 10)
+    {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+        return $randomString;
+    }
+
+    /**
+     * Post add banner page
+     */
+    public function postAddBanner(Request $request)
+    {
+
+        // coverFile
+        $coverFile = $request->file('cover');
+        $cover = "";
+        if ($request->hasFile('cover')) {
+            $cover = $this->generateRandomString() . '.' . $request->cover->extension();
+            $request->cover->storeAs('img/banners/', $cover);
+            $cover .= '?n=' . time();
+        }
+
+        $dataInsert = [
+            'url' => $cover,
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
+        ];
+
+        $productModel = new Banner();
+        $result = $productModel->insertProduct($dataInsert);
+        if ($result > 0) {
+            return redirect()->route('adgetListBanner')->with('success', 'Thêm thành công!');
+        } else {
+            return redirect()->route('adgetListBanner')->with('error', 'Thêm thất bại!');
         }
 
     }
@@ -450,6 +502,16 @@ class AdminController extends Controller
         return view('admin.product_list', $this->data);
     }
 
+    public function getListBanner()
+    {
+
+        $productModel = new Banner();
+        $products = $productModel->getListProduct();
+        $this->data['products'] = $products;
+
+        return view('admin.banner_list', $this->data);
+    }
+
     /**
      * Delete product
      */
@@ -463,6 +525,22 @@ class AdminController extends Controller
             return redirect()->route('adgetListProduct')->with('success', 'Xóa thành công!');
         } else {
             return redirect()->route('adgetListProduct')->with('error', 'Xóa thất bại!');
+        }
+    }
+
+    /**
+     * Delete banner
+     */
+    public function getDelBanner($id)
+    {
+
+        $productModel = new Banner();
+        $result = $productModel->deleteProduct($id);
+
+        if ($result > 0) {
+            return redirect()->route('adgetListBanner')->with('success', 'Xóa thành công!');
+        } else {
+            return redirect()->route('adgetListBanner')->with('error', 'Xóa thất bại!');
         }
     }
 
@@ -1054,7 +1132,6 @@ class AdminController extends Controller
         if (!$status) {
             $status = 1;
         }
-        
 
         $dataUpdate = [
             'name' => $name,

@@ -57,10 +57,10 @@
                                         rel="noopener noreferrer">
                                         <div class="product-block thumbnail px-0 py-0">
                                             <div class="mb-0">
-                                                <div class="product-img">
+                                                <div class="product-img"  style="max-width: 100%; height:100%">
                                                     <img src="{{asset('public/img/post/' . $item->cover)}}"
                                                         alt="{{$item->title}}"
-                                                        style="object-fit: cover;width: 270px;height: 270px;"
+                                                       
                                                         class="img-responsive mx-auto">
                                                 </div>
                                             </div>

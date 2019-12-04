@@ -890,6 +890,7 @@ header .main-nav .search-form > div button[type="submit"] {
 }
 .best-sellers .product-caption h3 {
   font-size: 14px;
+  line-height: 1.3em;
 }
 .best-sellers .product-caption .pricing {
   color: red;

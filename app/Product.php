@@ -38,7 +38,7 @@ class Product extends Model
 
     public function getList5Product()
     {
-        return Product::orderBy('pos', 'asc')->orderBy('created_at', 'desc')->take(5)->get();
+        return Product::orderBy('pos', 'asc')->orderBy('created_at', 'desc')->take(4)->get();
     }
 
     public function getListProductByType($type)

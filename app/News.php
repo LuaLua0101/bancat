@@ -43,7 +43,7 @@ class News extends Model
 
     public function getList5NewestNews()
     {
-        return News::orderBy('pos', 'asc')->orderBy('created_at', 'desc')->take(5)->get();
+        return News::orderBy('pos', 'asc')->orderBy('created_at', 'desc')->take(4)->get();
     }
 
     public function deleteNews($id)

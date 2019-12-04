@@ -186,8 +186,8 @@
     </section> @endif
     @endforeach
     <!-- End patin for kids  -->
-    <!-- News  -->
-    <section class="latest-news">
+     <!-- Latest products  -->
+     <section class="best-sellers latest-products">
         <div class="container">
             <!-- Title  -->
             <div class="breadcum">
@@ -195,11 +195,48 @@
                     <span>Tin tức - Bài viết</span>
                 </h2>
             </div>
+            <!-- List products  -->
+            <div class="row my-4 pt-3">
+                @foreach($newss as $item)
+                <!-- Product block  -->
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3" >
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <div class="product-block thumbnail px-0 py-0" >
+                            <div class="mb-0">
+                                <div class="product-img">
+                                <a href="{{route('getNews', ['news' => $item->slug])}}">
+                                        <img src="{{asset('public/img/post/' . $item->cover)}}"
+                                            style="object-fit: cover;width: 270px;height: 270px;" alt="{{$item->title}}"
+                                            class="img-responsive mx-auto" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-caption text-center">
+                                <h3 class="product-title mt-0 py-3" style="color:#337ab7">
+                                    <b>{{substr($item->title, 0,40)}}
+                                    {{ strlen($item->title) > 40 ? "..." : ""}}</b>
+                                </h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+    <!-- Latest products  -->
+    <!-- News  -->
+    <!-- <section class="best-sellers kids-products">
+        <div class="container">
+            <div class="breadcum">
+                <h2 class="text-uppercase breadcum-header">
+                    <span>Tin tức - Bài viết</span>
+                </h2>
+            </div>
             <div class="row">
                 @foreach($newss as $item)
-                <!-- News item  -->
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 news-item">
-                    <a href="#">
+                    <a href="{{route('getNews', ['news' => $item->slug])}}">
                         <div class="news-block thumbnail">
                             <div class="mb-0">
                                 <div class="news-img">
@@ -227,7 +264,7 @@
             </div>
 
         </div>
-    </section>
+    </section> -->
     <!-- end news  -->
     <!-- FEEDBACK  -->
     <!-- <section class="feedback mb-4">

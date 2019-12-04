@@ -53,7 +53,7 @@
                             <div class="row my-4 pt-3">
                                 @foreach($products as $item)
                                 <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                                    <a href="{{route('getProduct', ['product' => $item->slug])}}" target="_blank"
+                                    <a href="{{route('getProduct', ['product' => $item->slug])}}"
                                         rel="noopener noreferrer">
                                         <div class="product-block thumbnail px-0 py-0">
                                             <div class="mb-0">

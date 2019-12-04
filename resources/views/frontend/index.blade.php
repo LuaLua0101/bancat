@@ -112,7 +112,7 @@
                 @foreach($list5 as $item)
                 <!-- Product block  -->
                 <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
+                    <a href="{{route('getProduct', ['product' => $item->slug])}}" rel="noopener noreferrer">
                         <div class="product-block thumbnail px-0 py-0">
                             <div class="mb-0">
                                 <div class="product-img">
@@ -200,7 +200,7 @@
                 @foreach($newss as $item)
                 <!-- Product block  -->
                 <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3" >
-                    <a href="#" target="_blank" rel="noopener noreferrer">
+                    <a href="{{route('getNews', ['news' => $item->slug])}}" rel="noopener noreferrer">
                         <div class="product-block thumbnail px-0 py-0" >
                             <div class="mb-0">
                                 <div class="product-img">

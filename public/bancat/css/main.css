@@ -303,7 +303,7 @@
 }
 
 .bg-main-color {
-  background-color: #055dc7;
+  background-color: #fe9705;
 }
 
 .bg-transparent {
@@ -315,15 +315,15 @@
 }
 
 .bg-blue-light {
-  background: #0588fa;
+  background: #fe9705;
 }
 
 .bg-blue-light-2 {
-  background: #37a0fb;
+  background: #fe9705;
 }
 
 .bg-blue {
-  background: #055dc7;
+  background: #fe9705;
 }
 
 .bg-grey {
@@ -347,7 +347,7 @@
 }
 
 .text-brand {
-  color: #055dc7;
+  color: #fe9705;
 }
 
 .text-red {
@@ -427,7 +427,7 @@
 .breadcum .breadcum-header::after {
   content: "";
   display: block;
-  border-top: 2px solid #055dc7;
+  border-top: 2px solid #fe9705;
   width: 100%;
   height: 1px;
   position: absolute;
@@ -460,7 +460,7 @@
   display: inline-block;
 }
 .slick-prev:hover {
-  background: #37a0fb;
+  background: #fe9705;
 }
 .slick-prev:hover::before {
   color: #ffff;
@@ -485,7 +485,7 @@
   display: inline-block;
 }
 .slick-next:hover {
-  background: #37a0fb;
+  background: #fe9705;
 }
 .slick-next:hover::before {
   color: #ffff;
@@ -542,7 +542,7 @@
   font-size: 14px;
 }
 .sidebar-list li a:hover {
-  color: #055dc7;
+  color: #fe9705;
 }
 .sidebar-list li a span {
   color: #898989;
@@ -578,7 +578,7 @@
   margin-bottom: 3px;
 }
 .sidebar-product .content .title:hover {
-  color: #055dc7;
+  color: #fe9705;
 }
 .sidebar-product .content .price {
   font-size: 14px;
@@ -608,7 +608,7 @@
   width: 100%;
 }
 .sidebar-search form input:focus {
-  border-color: #055dc7;
+  border-color: #fe9705;
 }
 .sidebar-search form .btn-src {
   background-color: #1b1b1c;
@@ -621,7 +621,7 @@
   width: 50px;
 }
 .sidebar-search form .btn-src:hover {
-  color: #055dc7;
+  color: #fe9705;
 }
 
 .tags li {
@@ -640,8 +640,8 @@
   transition: all 0.5s;
 }
 .tags li a:hover {
-  color: #055dc7;
-  border-color: #055dc7;
+  color: #fe9705;
+  border-color: #fe9705;
 }
 
 @media only screen and (max-width: 575.98px) {
@@ -660,7 +660,7 @@
   color: #000;
 }
 .pagination--2 li a {
-  border: 1px solid #055dc7;
+  border: 1px solid #fe9705;
   display: block;
   margin-right: 20px;
   text-align: center;
@@ -668,14 +668,14 @@
   line-height: 45px;
   height: 45px;
   width: 45px;
-  background: #055dc7;
+  background: #fe9705;
   color: #ffff;
   border-radius: 0;
 }
 .pagination--2 li:hover a,
 .pagination--2 li.active a {
-  border-color: #055dc7;
-  color: #055dc7;
+  border-color: #fe9705;
+  color: #fe9705;
   background-color: #ffff;
 }
 
@@ -745,7 +745,7 @@ header .main-menu .cart {
   padding: 4% 0;
 }
 header .main-nav {
-  background: #0588fa;
+  background: #fe9705;
   color: #ffff;
   text-transform: uppercase;
   padding: 0;
@@ -758,15 +758,15 @@ header .main-nav .nav li a {
   padding: 15px 25px;
 }
 header .main-nav .nav li a:hover {
-  background-color: #055dc7;
+  background-color: #fe9705;
   color: #ffff;
 }
 header .main-nav .nav li.active a {
-  background: #37a0fb;
+  background: #fe9705;
   color: #ffff;
 }
 header .main-nav .nav li.active a:hover {
-  background: #055dc7;
+  background: #fe9705;
   color: #ffff;
 }
 header .main-nav .nav .dropdown-menu a {
@@ -778,8 +778,8 @@ header .main-nav .search-form > div {
 header .main-nav .search-form > div input {
   border-radius: 15px;
   box-shadow: unset;
-  border-color: #37a0fb;
-  background: #37a0fb;
+  border-color: #fe9705;
+  background: #fe9705;
   color: #ffff;
 }
 header .main-nav .search-form > div input::placeholder {
@@ -787,7 +787,7 @@ header .main-nav .search-form > div input::placeholder {
 }
 header .main-nav .search-form > div input:focus {
   box-shadow: unset;
-  border-color: #37a0fb;
+  border-color: #fe9705;
   outline: unset;
 }
 header .main-nav .search-form > div input:focus + button {
@@ -795,7 +795,7 @@ header .main-nav .search-form > div input:focus + button {
 }
 header .main-nav .search-form > div button[type="submit"] {
   border-top-right-radius: 15px;
-  background: #37a0fb;
+  background: #fe9705;
   color: #ffff;
   border-bottom-right-radius: 15px;
   border-left: 0px;
@@ -835,7 +835,7 @@ header .main-nav .search-form > div button[type="submit"] {
 /*         2. HOMEPAGE CAETGORY BAR   */
 /**************************************/
 .category-bar li:first-child {
-  background: #0588fa;
+  background: #fe9705;
 }
 
 /**************************************/
@@ -863,7 +863,7 @@ header .main-nav .search-form > div button[type="submit"] {
   cursor: pointer;
 }
 .best-sellers .product-block:hover .product-caption {
-  background: #055dc7;
+  background: #fe9705;
   color: #ffff;
 }
 .best-sellers .product-block:hover .product-title a {
@@ -1007,7 +1007,7 @@ header .main-nav .search-form > div button[type="submit"] {
 }
 .filter-results .style-view:hover,
 .filter-results .style-view.active {
-  color: #055dc7;
+  color: #fe9705;
   cursor: pointer;
 }
 .filter-results .filter-pagination {
@@ -1025,7 +1025,7 @@ header .main-nav .search-form > div button[type="submit"] {
   cursor: pointer;
 }
 .filter-results .filter-pagination li.active {
-  border: 1px solid #055dc7;
+  border: 1px solid #fe9705;
 }
 .filter-results .block-margin {
   padding: 6% 3%;
@@ -1194,7 +1194,7 @@ header .main-nav .search-form > div button[type="submit"] {
 }
 .blogs-page .blog-item__info .post-meta a a:hover,
 .blogs-page .blog-item__info .post-meta span a:hover {
-  color: #055dc7;
+  color: #fe9705;
 }
 .blogs-page .blog-item__info .post-meta span:after {
   content: "|";
@@ -1214,7 +1214,7 @@ header .main-nav .search-form > div button[type="submit"] {
   color: #1b1b1c;
 }
 .blogs-page .blog-item__info .post-title a:hover {
-  color: #055dc7;
+  color: #fe9705;
 }
 
 /*==============================
@@ -1392,7 +1392,7 @@ Start Comment Area Wrapper
   color: #1b1b1c;
 }
 .single-comment-wrap .comment-footer a.btn-reply:hover {
-  color: #055dc7;
+  color: #fe9705;
 }
 
 /***********Comments and leave your thoughts*************/
@@ -1409,7 +1409,7 @@ Start Comment Area Wrapper
   transition: all 0.5s;
 }
 .footer .footer-content a:hover {
-  color: #0588fa;
+  color: #fe9705;
 }
 .footer .contact-info li {
   list-style-type: disc;
@@ -1435,7 +1435,7 @@ Start Comment Area Wrapper
   bottom: 6%;
   right: 6%;
   z-index: 999;
-  background: #37a0fb;
+  background: #fe9705;
   padding: 10px;
   color: #ffff;
   border-radius: 15px;
@@ -1461,7 +1461,7 @@ Start Comment Area Wrapper
   bottom: 5%;
   width: 60px;
   height: 60px;
-  background: #0588fa;
+  background: #fe9705;
   border-radius: 50%;
 }
 .chatbox-btn-wrapper .chatbox-btn {

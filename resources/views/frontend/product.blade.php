@@ -46,7 +46,7 @@
                             <!-- Title  -->
                             <div class="breadcum">
                                 <h2 class="text-uppercase breadcum-header">
-                                    <span style="color:#0588fa"><b>{{$title}}</b></span>
+                                    <span style="color:#FE9705"><b>{{$title}}</b></span>
                                 </h2>
                             </div>
                             <!-- List products  -->

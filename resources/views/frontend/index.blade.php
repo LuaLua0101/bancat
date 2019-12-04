@@ -212,7 +212,7 @@
                                 </div>
                             </div>
                             <div class="product-caption text-center">
-                                <h3 class="product-title mt-0 py-3" style="color:#337ab7">
+                                <h3 class="product-title mt-0 py-3">
                                     <b>{{substr($item->title, 0,40)}}
                                     {{ strlen($item->title) > 40 ? "..." : ""}}</b>
                                 </h3>

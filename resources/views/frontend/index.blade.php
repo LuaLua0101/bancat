@@ -10,11 +10,12 @@
 
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 category-bar">
                     <ul class="list-group">
-                        <li class="list-group-item"><a href="#" class="text-white"> DANH MỤC SẢN PHẨM</a></li>
+                        <li class="list-group-item" style="padding: 12.5px">
+                            <a href="#" class="text-white"> DANH MỤC SẢN PHẨM</a></li>
                         </li>
                         @foreach( config('config.cate_name') as $cateKey => $cateInfo )
 
-                        <li class="list-group-item"><a
+                        <li class="list-group-item" style="padding: 12.5px"><a
                                 href="{{route('getCate', ['cate' => config('config.cate')[$cateKey]])}}">{{$cateInfo[0]}}</a>
                         </li>
                         @endforeach

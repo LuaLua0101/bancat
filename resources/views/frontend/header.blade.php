@@ -52,7 +52,7 @@
                  <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 px-0">
                      <!-- Services  -->
 
-                     <div class="col-xs-9 col-sm-9 col-md-10 col-lg-10">
+                     <div class="col-xs-9 col-sm-9 col-md-10 col-lg-10" style="float:right">
                          <!-- block service  -->
                          <div class="block-service col-md-4 col-lg-4 px-0">
                              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 px-0">

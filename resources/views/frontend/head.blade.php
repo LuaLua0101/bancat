@@ -4,7 +4,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="SHORTCUT ICON" href="{{asset('public/img/fanvicon-icon-500x3602322_32x23.png')}}" type="image/x-icon" />
-    <META NAME="ROBOTS" CONTENT="noodp, INDEX, FOLLOW" />
+    <META NAME="ROBOTS" CONTENT="noodp, NOINDEX, NOFOLLOW" />
     <link rel="canonical" href="index.html" />
     <meta name="author" content="{{config('config.title')}}" />
     <title>{{config('config.title')}}</title>

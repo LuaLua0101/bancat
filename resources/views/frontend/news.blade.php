@@ -28,7 +28,13 @@
                                             <h2 class="post-title"><a
                                                     href="{{route('getNews', ['news' => $item->slug])}}">{{$item->title}}</a>
                                             </h2>
-                                            <p class="post-excerpt">{{$item->description}}</p>
+                                            <p class="post-excerpt">
+                                            <?php
+                                                $tlen = strlen($item->title) - 60;
+                                                $cut_len = 250 - $tlen;
+                                            ?>
+                                            <!-- {{substr($item->description, 0, $cut_len)}}
+                                    {{ strlen($item->description) >$cut_len ? " ..." : ""}} -->
                                         </div>
                                     </div>
                                 </div>
@@ -72,7 +78,7 @@
                                                 class="img-responsive" alt="Blog"></a>
                                         <div class="content">
                                             <a href="{{route('getNews', ['news' => $item->slug])}}">{{$item->title}}</a>
-                                            <p>{{$item->description}}</p>
+                                            <!-- <p>{{$item->description}}</p> -->
                                         </div>
                                     </div>
                                     @endforeach

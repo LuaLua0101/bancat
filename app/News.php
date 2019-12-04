@@ -34,7 +34,7 @@ class News extends Model
     }
     public function getListNews()
     {
-        return News::orderBy('pos', 'asc')->orderBy('created_at', 'desc')->get();
+        return News::where('type', null)->orderBy('pos', 'asc')->orderBy('created_at', 'desc')->get();
     }
     public function getList3NewestNews()
     {
@@ -43,7 +43,7 @@ class News extends Model
 
     public function getList5NewestNews()
     {
-        return News::orderBy('pos', 'asc')->orderBy('created_at', 'desc')->take(4)->get();
+        return News::where('type', null)->orderBy('pos', 'asc')->orderBy('created_at', 'desc')->take(4)->get();
     }
 
     public function deleteNews($id)

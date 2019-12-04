@@ -17,6 +17,7 @@
                                 alt="Item 1">
                             @endforeach
                             <img src="{{asset('public/img/post/' .$product->cover)}}" class="img-responsive"
+                            style="object-fit: cover;width: 409px;height: 409px;"
                                 alt="Item 1">
                         </div>
                         <div class="slider-nav mt-3">
@@ -27,6 +28,7 @@
                             @endforeach
 
                             <img src="{{asset('public/img/post/' .$product->cover)}}" class="img-responsive mr-3"
+                            style="object-fit: cover;width: 87px;height: 87px;"
                                 alt="Item 1">
                         </div>
                     </div>
@@ -166,7 +168,7 @@
                             <div class="content">
                                 <a href="{{route('getNews', ['news' => $item->slug])}}"
                                     class="title">{{$item->title}}</a>
-                                <p>{{$item->description}}</p>
+                                <!-- <p>{{$item->description}}</p> -->
                             </div>
                         </div>
                         @endforeach

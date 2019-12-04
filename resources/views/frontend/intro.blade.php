@@ -65,7 +65,7 @@
                                     <div class="content">
                                         <a href="{{route('getNews', ['news' => $item->slug])}}"
                                             class="title">{{$item->title}}</a>
-                                        <p>{{$item->description}}</p>
+                                        <!-- <p>{{$item->description}}</p> -->
                                     </div>
                                 </div>
                                 @endforeach

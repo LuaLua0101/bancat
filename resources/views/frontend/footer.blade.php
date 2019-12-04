@@ -10,9 +10,9 @@
                                 Đức</strong></a></li>
                     <li class="my-3"><a href="#"><strong>Địa chỉ: 331/46 Vườn Lài, P. An Phú Đông, Q.12, TP.
                                 HCM</strong></a></li>
-                    <li class="mb-3"><a href="#"><strong>Điện thoại : 0972925492</strong></a>
+                    <li class="mb-3"><a href="#"><strong>Điện thoại : 0962212241</strong></a>
                     </li>
-                    <li class="mb-3"><a href="#"><strong>Email: cokhisauhoang@gmail.com</strong></a></li>
+                    <li class="mb-3"><a href="#"><strong>Email: akvinaco@gmail.com</strong></a></li>
                 </ul>
             </div>
 

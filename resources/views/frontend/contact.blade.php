@@ -35,13 +35,13 @@
                                     </address>
                                 </div>
                                 <ul>
-                                    <li class="my-3"><a href="tel:+0972925492" class="text-black"><i
+                                    <li class="my-3"><a href="tel:+0962212241" class="text-black"><i
                                                 class="fa fa-phone  text-brand" aria-hidden="true"></i>
-                                            Hotline: 0972925492</a></li>
-                                    <li class="my-3"> <a href="mailto:cokhisauhoang@gmail.com" class="text-black">
+                                            Hotline: 0962212241</a></li>
+                                    <li class="my-3"> <a href="mailto:akvinaco@gmail.com" class="text-black">
                                             <i class="fa fa-envelope  text-brand" aria-hidden="true"></i>
                                             <span>
-                                                cokhisauhoang@gmail.com
+                                                akvinaco@gmail.com
                                             </span>
                                         </a></li>
                                 </ul>

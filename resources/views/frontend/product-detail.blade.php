@@ -86,7 +86,7 @@
 
                                 <div class="qualities mt-3">
                                     <div class="row">
-                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 nad-img-wrapper">
                                             <p class="d-inline-block">
                                                 {!!$product->content!!}
                                             </p>
@@ -115,7 +115,7 @@
                         </div>
                         <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
                             aria-labelledby="headingOne">
-                            <div class="panel-body">
+                            <div class="panel-body nad-img-wrapper">
                                 <p> {!!$product->content!!}</p>
                             </div>
                         </div>

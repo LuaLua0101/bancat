@@ -24,8 +24,12 @@
                         <section class="blog-post-txt-wrap">
                             <div class="blog-post-txt">
                                 <h2>{{$news->description}}</h2>
-
-                                {!!$news->content!!}
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 nad-img-wrapper">
+                                            <p class="d-inline-block">
+                                            {!!$news->content!!}
+                                            </p>
+                                        </div>
+                            
                             </div>
 
                             <!-- <div class="share-article text-center">

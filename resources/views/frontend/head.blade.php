@@ -29,4 +29,7 @@
     <link href="{{asset('public/bancat/css/slick-theme.css')}}" type="text/css" rel="stylesheet" />
     <link href="{{asset('public/bancat/css/slick.css')}}" type="text/css" rel="stylesheet" />
     <link href="{{asset('public/bancat/css/main.css')}}" type="text/css" rel="stylesheet" />
+    <style>
+        .nad-img-wrapper p > img {max-width: 100%; height:100% }
+        </style>
 </head>
